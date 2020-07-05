@@ -1,0 +1,45 @@
+*
+    box-sizing: border-box
+
+html, body
+    position: relative
+    color: #000000
+    overflow-x: hidden
+    font-family: 'RobotoCondensed', Arial, sans-serif
+    font-size: 16px
+    line-height: 1.7
+    margin: 0
+    padding: 0
+
+body
+    background: #ffffff
+
+ul
+    padding: 0
+
+a
+    color: #000000
+    text-decoration: none
+    transition: all .5s ease-in
+
+a:hover,
+a:focus
+    text-decoration: none
+    color: $green
+
+svg, svg path
+    transition: all .5s ease-in
+
+.container 
+    width: 100%
+    max-width: 1680px
+    margin: 0 auto
+
+.ruble
+    position: relative
+    padding-right: 14px
+    &::after
+        content: 'Р'
+        position: absolute
+        top: 0
+        right: 0

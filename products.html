@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elikor — все продукты</title>
+
+    <link rel="stylesheet" href="./css/plugins/selectize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__block header__block--left">
+                    <div class="header__logo">
+                        <img src="./img/logo.png" alt="Логотип производителя кухонных вытяжек Elikor">
+                        <div class="header__logo-text">Надежность в стильном<br />оформлении</div>
+                    </div>
+                    <nav class="header__nav">
+                        <div class="header__nav-item">
+                            <a href="#" class="header__nav-link">О компании</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a href="#" class="header__nav-link">Продукция</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a href="#" class="header__nav-link">Фотогалерея</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a href="#" class="header__nav-link">Где купить</a>
+                        </div>
+                        <div class="header__nav-item">
+                            <a href="#" class="header__nav-link">Сервисный центр</a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="header__block header__block--right">
+                    <div class="header__login">
+                        <img src="./img/login.png" alt="Войти в личный кабинет Elikor">
+                    </div>
+                    <div class="header__lang">
+                        <a href="#" class="header__lang-link header__lang-link--active">Ru</a>
+                        <a href="#" class="header__lang-link">En</a>
+                    </div>
+                    <div class="header__phone">
+                        <a href="tel:+78005551255" class="header__phone-link">+7 (800) 555-12-55</a>
+                    </div>
+                    <div class="header__goods">0</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="categories">
+            <div class="container">
+                <div class="categories__inner">
+                    <a href="#" class="categories__item categories__item--active">Вся продукция</a>
+                    <a href="#" class="categories__item">вертикальные</a>
+                    <a href="#" class="categories__item">настенные</a>
+                    <a href="#" class="categories__item">классические</a>
+                    <a href="#" class="categories__item categories__item--edge">угловые</a>
+                    <a href="#" class="categories__item">островные</a>
+                    <a href="#" class="categories__item">стандартные</a>
+                    <a href="#" class="categories__item">встраиваемые</a>
+                    <a href="#" class="categories__item">телескопические</a>
+                    <a href="#" class="categories__item">аксессуары</a>
+                </div>
+            </div>
+        </section>
+        <section class="sort">
+            <div class="container">
+                <div class="sort__inner">
+                    <select name="sort-popular" id="sort-popular" class="sort__select sort__select-js">
+                        <option value="placeholder">По популярности</option>
+                        <option value="option-one">Первая опция</option>
+                        <option value="option-two">Вторая опция с длинным подробным описанием</option>
+                        <option value="option-three">Третья опция</option>
+                    </select>
+                    <select name="sort-decoration" id="sort-decoration" class="sort__select sort__select-js">
+                        <option value="placeholder">Обрамление</option>
+                        <option value="option-one">Первая опция</option>
+                        <option value="option-two">Вторая опция</option>
+                        <option value="option-three">Третья опция</option>
+                    </select>
+                    <select name="sort-productivity" id="sort-productivity" class="sort__select sort__select-js">
+                        <option value="placeholder">Производительность</option>
+                        <option value="option-one">Первая опция</option>
+                        <option value="option-two">Вторая опция</option>
+                        <option value="option-three">Третья опция</option>
+                    </select>
+                    <select name="sort-color" id="sort-color" class="sort__select sort__select-js">
+                        <option value="placeholder">Цвет</option>
+                        <option value="option-one">Первая опция</option>
+                        <option value="option-two">Вторая опция</option>
+                        <option value="option-three">Третья опция</option>
+                    </select>
+                    <select name="sort-width" id="sort-width" class="sort__select sort__select-js">
+                        <option value="placeholder">Ширина</option>
+                        <option value="option-one">Первая опция</option>
+                        <option value="option-two">Вторая опция</option>
+                        <option value="option-three">Третья опция</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog__inner">
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Elikor Art</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Elikor Art</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Дельта</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-title">Жемчуг</div>
+                                        <div class="catalog__item-price ruble">7 790</div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__more">
+                    <a href="#" class="catalog__more-link">
+                        <span class="catalog__more-pic"></span>
+                        <span class="catalog__more-text">Загрузить еще</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/plugins/jquery.min.js"></script>
+    <script src="./js/plugins/selectize.min.js"></script>
+    <script src="./js/scripts.js"></script>
+</body>
+</html>
