@@ -1,14 +1,22 @@
 .header
     padding: 32px 0 73px
+    @media (max-width: 1023px)
+        padding-bottom: 45px
+    @media (max-width: 767px)
+        padding: 20px 0
     &__inner
         display: flex
         justify-content: space-between
+        @media (max-width: 767px)
+            flex-wrap: wrap
     &__block
         display: flex
         align-items: flex-start
         &--right
             justify-content: flex-end
             padding-top: 32px
+            @media (max-width: 1439px)
+                padding-top: 18px
     &__logo
         line-height: 1
         &-text
@@ -17,12 +25,25 @@
             font-size: 11px
             line-height: 15px
             font-family: 'Magistral-Book', Arial, serif
+            @media (max-width: 1439px)
+                padding-top: 0
+                font-size: 8px
+                line-height: 10px
+        &-desktop
+            @media (max-width: 1439px)
+                display: none
     &__nav
         padding: 32px 0 0 110px
         display: flex
         align-items: center
+        @media (max-width: 1749px)
+            padding-left: 32px
+        @media (max-width: 1439px)
+            display: none
         &-item
             padding-right: 57px
+            @media (max-width: 1749px)
+                padding-right: 20px
             &:last-child
                 padding-right: 0
         &-link
@@ -32,8 +53,12 @@
             font-family: 'EuropeC', Arial, serif
     &__login
         padding: 5px 72px 0 0
+        @media (max-width: 1439px)
+            display: none
     &__lang
         padding-right: 72px
+        @media (max-width: 1439px)
+            display: none
         &-link
             text-transform: uppercase
             color: #cecece
@@ -46,9 +71,18 @@
                 padding-right: 18px
     &__phone
         padding-right: 50px
+        @media (max-width: 767px)
+            display: none
         &-link
             letter-spacing: 0.05em
             font-family: 'Magistral-Book', Arial, serif
+        &--mobile
+            display: none
+            @media (max-width: 767px)
+                display: block
+                width: 100%
+                text-align: center
+                padding: 12px 0 0
     &__goods
         border-radius: 50%
         background-color: #313131
@@ -59,9 +93,43 @@
         font-size: 11px
         letter-spacing: 0.07em
         font-family: 'Magistral-Book', Arial, serif
+    &__burger
+        display: none
+        &-line
+            display: inline-block
+            width: 45px
+            position: relative
+            height: 2px
+            background-color: $green
+            &::after,
+            &::before
+                content: ''
+                height: 2px
+                width: 100%
+                background-color: $green
+                position: absolute
+            &::after
+                top: 12px
+            &::before
+                top: 24px
+        @media (max-width: 1439px)
+            display: block
+
+    &__mobile
+        &-logo
+            display: none
+            @media (max-width: 1439px)
+                display: block
+            img
+                @media (max-width: 1439px)
+                    object-fit: contain
+                    width: 96px
+                    height: 37px
 
 .categories
     padding-bottom: 47px
+    @media (max-width: 767px)
+        padding-bottom: 20px
     &__inner
         display: flex
         flex-wrap: wrap
@@ -75,12 +143,25 @@
         letter-spacing: 0.07em
         color: #dadada
         padding-right: 70px
+        @media (max-width: 1749px)
+            font-size: 24px
+            line-height: 36px
+        @media (max-width: 1439px)
+            font-size: 16px
+            line-height: 24px
+        @media (max-width: 767px)
+            font-size: 12px
+            line-height: 18px
+            padding-right: 32px
         &::after
             content: '/'
             position: absolute
             font-family: 'HeliosCond', Arial, serif
             top: 4px
             right: 30px
+            @media (max-width: 767px)
+                right: 16px
+                top: 2px
         &--active
             color: #000000
         &--edge,
@@ -88,16 +169,30 @@
             padding-right: 0
             &::after
                 content: none
+        &--edge
+            @media (max-width: 1749px)
+                padding-right: 70px
+                @media (max-width: 767px)
+                    padding-right: 32px
+            &::after
+                @media (max-width: 1749px)
+                    content: '/'
 
 
 .sort
     padding-bottom: 80px
+    @media (max-width: 1023px)
+        padding-bottom: 40px
     &__inner
         display: flex
         align-items: center
+        @media (max-width: 1439px)
+            flex-wrap: wrap
     &__select 
         width: 100%
         padding-right: 90px
+        @media (max-width: 1439px)
+            padding-right: 0
         &:last-child
             padding-right: 0
     .selectize-control.single .selectize-input
@@ -135,7 +230,7 @@
         flex-wrap: wrap
     &__item
         width: 100%
-        min-height: 627px
+        min-height: 500px
         position: relative
         margin: 0 auto
         box-sizing: border-box
@@ -147,11 +242,23 @@
         &-wrapper
             width: calc((100% - 66px)/3)
             position: relative
-            height: 627px
+            height: 500px
             margin-bottom: 33px
             margin-right: 32px
+            @media (max-width: 1023px)
+                width: calc((100% - 33px)/2)  
+            @media (max-width: 767px)
+                width: 100% 
+                margin-right: 0
             &:nth-child(3n + 3)
                 margin-right: 0
+                @media (max-width: 1023px)
+                    margin-right: 33px
+                    @media (max-width: 767px)
+                        margin-right: 0
+            &:nth-child(2n + 2)
+                @media (max-width: 1023px)
+                    margin-right: 0
         &-inner
             position: absolute
             width: calc(100%)
@@ -183,14 +290,19 @@
             top: 42px
             left: 28px
             right: 28px
-            display: flex
-            justify-content: space-between
-            border-bottom: 1px solid $gray
             font-size: 14px
             letter-spacing: 0.07em
             text-transform: uppercase
             padding-bottom: 15px
             z-index: 8
+            &-text
+                display: flex
+                justify-content: space-between
+            &-line
+                margin-top: 10px
+                width: 0
+                height: 1px
+                background-color: $gray
         &-pic
             background-repeat: no-repeat
             background-size: contain
@@ -202,14 +314,18 @@
             left: 50%
             transform: translate(-50%, -50%)
             background-image: url(../img/product-1.png)
+            @media (max-width: 1439px)
+                width: 250px
+                height: 258px
         &-wrapper:nth-child(2n + 2) .catalog__item-pic
             background-image: url(../img/product-2.png)
         &-back .catalog__item-top
             color: #ffffff
-            border-bottom-color: #ffffff
+            .catalog__item-top-line
+                background-color: #ffffff
         &-interior
             width: 100%
-            height: 445px
+            height: 318px
             background-repeat: no-repeat
             background-size: cover
             background-position: 50% 50%
@@ -258,10 +374,12 @@
             border-bottom: 1px solid $gray
             letter-spacing: 0.13em
     &__more
-        padding: 80px 0 175px
+        padding: 80px 0 160px
         display: flex
         flex-direction: column
         align-items: center
+        @media (max-width: 1439px)
+            padding: 45px 0 80px
         &-link
             display: inline-block
             text-align: center
@@ -270,7 +388,10 @@
             position: relative
             width: 70px
             height: 70px
-            margin-bottom: 32px
+            margin-bottom: 12px
+            @media (max-width: 1439px)
+                width: 45px
+                height: 45px
             &::before,
             &::after
                 content: ''
@@ -305,11 +426,15 @@
 
 .articles
     padding-bottom: 185px
+    @media (max-width: 1439px)
+        padding-bottom: 80px
     &__top
         display: flex
         justify-content: space-between
         align-items: center
-        padding-bottom: 85px
+        padding-bottom: 80px
+        @media (max-width: 1439px)
+            padding-bottom: 45px
     &__left
         display: flex
         align-items: center
@@ -324,11 +449,15 @@
         background-image: url(../img/arrow.png)
     &__prev
         padding: 0 64px 0 60px
+        @media (max-width: 767px)
+            padding: 0 24px
     &__next
         transform: rotate(180deg)
     &__right
         padding-right: 72px
         position: relative
+        @media (max-width: 767px)
+            padding-right: 0
         &::after,
         &::before
             content: ''
@@ -337,11 +466,14 @@
             background-color: $gray
             width: 40px
             height: 1px
+            @media (max-width: 767px)
+                content: none
         &::before
             top: 9px
         &::after
             top: 16px
     &__item
+        outline: none
         &-title
             display: inline-block
             max-width: 610px
@@ -350,7 +482,13 @@
             font-family: 'EuropeC', Arial, serif
             letter-spacing: 0.07em
             text-transform: uppercase
-            padding-bottom: 45px
+            padding-bottom: 28px
+            @media (max-width: 1439px)
+                font-size: 24px
+                line-height: 1.6
+                max-width: 90%
+            @media (max-width: 767px)
+                font-size: 16px
         &-annonce
             max-width: 570px
             font-weight: 300
@@ -359,6 +497,11 @@
             letter-spacing: 0.025em
             min-height: 150px
             overflow: hidden
+            @media (max-width: 1439px)
+                max-width: 90%
+            @media (max-width: 767px)
+                font-size: 16px
+                line-height: 1.5
         &-read
             display: flex
             align-items: center
@@ -373,14 +516,24 @@
                 display: inline-block
                 width: 70px
                 height: 1px
-                background-color: $gray
                 margin-bottom: 3px
+                position: relative
+            &-animate
+                display: inline-block
+                background-color: $gray
+                width: 0
+                height: 1px
+                position: absolute
+                top: 0
+                left: 0
 
 .footer__support
     color: #ffffff
-    padding: 220px 0 195px
+    padding: 220px 0 160px
     background: url(../img/footer-bg.jpg) no-repeat 50% 50%
     background-size: cover
+    @media (max-width: 1439px)
+        padding: 80px 0
     &-inner
         display: flex
         justify-content: center
@@ -390,14 +543,26 @@
         font-family: 'Magistral-Book', Arial, serif
         font-size: 43px
         letter-spacing: 0.1em
-        padding-bottom: 55px
+        padding-bottom: 40px
         text-transform: uppercase
         line-height: 1
+        @media (max-width: 1023px)
+            font-size: 32px
+        @media (max-width: 767px)
+            font-size: 24px
+            text-align: center
+            padding-bottom: 20px
     &-info
         font-size: 21px
         font-family: 'EuropeC', Arial, serif
         letter-spacing: 0.07em
         padding-bottom: 125px
+        @media (max-width: 1023px)
+            font-size: 16px
+            padding-bottom: 80px
+        @media (max-width: 767px)
+            font-size: 14px
+            text-align: center
     &-phone
         color: #ffffff
     &-emails
@@ -407,27 +572,42 @@
         letter-spacing: 0.13em
         text-transform: uppercase
         &-item
-            margin-bottom: 35px
+            margin-bottom: 40px
             display: flex
             align-items: center
+            @media (max-width: 767px)
+                flex-direction: column
     &-service
         width: 50%
         text-align: right
         padding-right: 30px
+        @media (max-width: 767px)
+            width: 100%
+            padding-right: 0
+            text-align: center
     &-link
         width: 50%
         padding-left: 30px
+        @media (max-width: 767px)
+            width: 100%
+            padding-left: 0
+            text-align: center
+            padding-top: 8px
         &-inner
             padding-bottom: 8px
             color: #ffffff
             display: inline-block
             border-bottom: 1px solid #ffffff
+            @media (max-width: 767px)
+                padding-bottom: 0
 
 .footer__main
-    padding: 65px 0 190px
+    padding: 65px 0 170px
     background-color: $green
     color: #ffffff
     position: relative
+    @media (max-width: 767px)
+        padding: 65px 0 45px
     &-round
         position: absolute
         background-color: $green
@@ -462,23 +642,40 @@
         font-family: 'EuropeC', Arial, serif
         letter-spacing: 0.13em
         text-transform: uppercase
+        @media (max-width: 1023px)
+            padding-bottom: 80px
+        @media (max-width: 767px)
+            padding-bottom: 45px
     &-nav
         display: flex
         width: 100%
+        @media (max-width: 767px)
+            flex-wrap: wrap
     &-left
         width: 50%
         padding-right: 50px
         display: flex
         flex-direction: column
         align-items: flex-end
+        @media (max-width: 767px)
+            width: 100%
+            padding-right: 0
+            padding-bottom: 32px
     &-right
         width: 50%
         padding-left: 50px
+        @media (max-width: 767px)
+            width: 100%
+            padding-left: 0
     &-title
         display: flex
         align-items: center
-        margin-bottom: 70px
+        margin-bottom: 56px
         width: 550px
+        @media (max-width: 1439px)
+            width: 100%
+        @media (max-width: 767px)
+            margin-bottom: 16px
         &-text
             color: #000000
             font-family: 'Magistral-Book', Arial, serif
@@ -500,19 +697,91 @@
         font-size: 12px
         font-family: 'EuropeC', Arial, serif
         letter-spacing: 0.13em
-        line-height: 41px
         text-transform: uppercase
+        max-width: 90%
+        display: inline-block
+        padding-bottom: 20px
         &:hover,
         &:focus
-            color: $gray
+            color: #000000
 
 .footer__info
     background-color: $green
     padding-bottom: 55px
+    @media (max-width: 1023px)
+        padding-bottom: 40px
     &-inner
         display: flex
         justify-content: space-between
         color: #ffffff
+        @media (max-width: 1023px)
+            flex-wrap: wrap
+    &-left
+        display: flex
+        align-items: center
+        font-weight: 300
+        font-size: 13px
+        letter-spacing: 0.05em
+        @media (max-width: 1023px)
+            order: 2
+            width: 100%
+            flex-direction: column
+            margin-bottom: 0
+    &-copyright
+        padding-right: 30px
+        @media (max-width: 1023px)
+            padding-right: 0
+    &-policy
+        color: #ffffff
+        opacity: 0.2
+    &-soc
+        display: flex
+        align-items: center
+        margin-right: 320px
+        @media (max-width: 1439px)
+            margin-right: 220px
+        @media (max-width: 1023px)
+            order: 1
+            width: 100%
+            margin-right: 0
+            justify-content: center
+            margin-bottom: 24px
+        &-link
+            display: inline-block
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: contain
+            width: 15px
+            height: 15px
+            padding-right: 75px
+    &-vk    
+        width: 19px
+        height: 10px
+        background-image: url(../img/vk.png)
+    &-insta
+        background-image: url(../img/insta.png)
+    &-fb
+        background-image: url(../img/fb.png)
+    &-youtube
+        width: 17px
+        height: 12px
+        background-image: url(../img/youtube.png)
+    &-right
+        font-size: 12px
+        letter-spacing: 0.05em
+        font-weight: 300
+        @media (max-width: 1023px)
+            order: 3
+            width: 100%
+            text-align: center
+    &-liqium
+        font-family: 'MagistralC', Arial, serif
+        font-size: 13px
+        letter-spacing: 0.07em
+        text-transform: uppercase
+
+
+        
 
             
 
