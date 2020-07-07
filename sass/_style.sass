@@ -1,9 +1,7 @@
 .header
-    padding: 32px 0 73px
-    @media (max-width: 1023px)
-        padding-bottom: 45px
+    padding: 32px 0 0
     @media (max-width: 767px)
-        padding: 20px 0
+        padding: 20px 0 0
     &__inner
         display: flex
         justify-content: space-between
@@ -127,9 +125,11 @@
                     height: 37px
 
 .categories
-    padding-bottom: 47px
+    padding: 73px 0 47px
+    @media (max-width: 1023px)
+        padding-top: 45px
     @media (max-width: 767px)
-        padding-bottom: 20px
+        padding: 20px 0
     &__inner
         display: flex
         flex-wrap: wrap
@@ -780,6 +780,22 @@
         letter-spacing: 0.07em
         text-transform: uppercase
 
+.dealers
+    background: url(../img/Elikor.jpg) no-repeat 0% 50%
+    background-size: cover
+    min-height: 1076px
+    margin-bottom: 145px
+    &__text
+        padding-top: 85px
+        color: #ffffff
+        font-family: 'EuropeC', Arial, serif
+        font-size: 32px
+        letter-spacing: 0.1em
+        max-width: 1250px
+
+.advantages
+    .h2
+        padding-bottom: 75px
 
         
 
