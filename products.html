@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="./css/plugins/selectize.css">
     <link rel="stylesheet" href="./css/plugins/slick.css">
+    <link rel="stylesheet" href="./css/plugins/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -44,9 +45,9 @@
                     <div class="header__logo-text">Надежность в стильном<br />оформлении</div>
                 </div>
                 <div class="header__block header__block--right">
-                    <div class="header__login">
+                    <a href="#login" class="header__login fancy">
                         <img src="./img/login.png" alt="Войти в личный кабинет Elikor">
-                    </div>
+                    </a>
                     <div class="header__lang">
                         <a href="#" class="header__lang-link header__lang-link--active">Ru</a>
                         <a href="#" class="header__lang-link">En</a>
@@ -488,16 +489,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="catalog__more">
-                    <a href="#" class="catalog__more-link">
-                        <span class="catalog__more-pic"></span>
+                <div class="show__more">
+                    <a href="#" class="show__more-link">
+                        <span class="show__more-pic"></span>
                         <br />
-                        <span class="catalog__more-text">Загрузить еще</span>
+                        <span class="show__more-text">Загрузить еще</span>
                     </a>
                 </div>
             </div>
         </section>
-        <section class="articles">
+        <section class="articles articles__block">
             <div class="container">
                 <div class="articles__top">
                     <div class="articles__left">
@@ -724,9 +725,76 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <div id="login" class="modal">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    <div class="modal__tabs">
+                        <div class="modal__tab modal__tab--active" data-login="auth">Вход</div>
+                        <div class="modal__tab" data-login="register">регистрация</div>
+                    </div>
+                </div>
+                <div class="login-tab__body" data-login="auth">
+                    <form class="login__auth">
+                        <div class="form__row">
+                            <input name="login__email" type="email" class="input" id="login__email" required>
+                            <label for="login__email" class="label">Электронная почта*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="login__password" type="password" class="input" id="login__password" required>
+                            <label for="login__password" class="label">Пароль*</label>
+                        </div>
+                        <div class="login__buttons">
+                            <input type="submit" class="btn btn--black btn--disabled" value="Войти">
+                            <a href="#" class="btn">Продолжить покупки</a>
+                        </div>
+                        <a href="#" class="login__forget">Забыли пароль?</a>
+                    </form>
+                </div>
+                <div class="login-tab__body" data-login="register" style="display: none;">
+                    <form class="register">
+                        <div class="form__row">
+                            <input name="register__name" type="text" class="input" id="register__name" required>
+                            <label for="register__name" class="label">Имя*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="register__surname" type="text" class="input" id="register__surname" required>
+                            <label for="register__name" class="label">Фамилия*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="register__email" type="email" class="input" id="register__email" required>
+                            <label for="register__email" class="label">Электронная почта*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="register__phone" type="tel" class="input" id="register__phone" required>
+                            <label for="register__phone" class="label">Телефон*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="register__password" type="password" class="input" id="register__password" required>
+                            <label for="register__password" class="label">Пароль*</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="register__repeate" type="password" class="input" id="register__repeate" required>
+                            <label for="register__repeate" class="label">Повторите пароль*</label>
+                        </div>
+                        <div class="login__buttons">
+                            <input type="submit" class="btn btn--black btn--disabled" value="Зарегистрироваться">
+                            <a href="#" class="btn">Продолжить покупки</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modals -->
+    
     <script src="./js/plugins/jquery.min.js"></script>
     <script src="./js/plugins/selectize.min.js"></script>
     <script src="./js/plugins/slick.min.js"></script>
+    <script src="./js/plugins/jquery.fancybox.min.js"></script>
+    <script src="./js/plugins/jquery.validate.min.js"></script>
     <script src="./js/scripts.js"></script>
 </body>
 </html>

@@ -50,6 +50,7 @@
             letter-spacing: 0.13em
             font-family: 'EuropeC', Arial, serif
     &__login
+        display: inline-block
         padding: 5px 72px 0 0
         @media (max-width: 1439px)
             display: none
@@ -91,6 +92,7 @@
         font-size: 11px
         letter-spacing: 0.07em
         font-family: 'Magistral-Book', Arial, serif
+        color: #ffffff
     &__burger
         display: none
         &-line
@@ -373,56 +375,6 @@
             padding-bottom: 8px
             border-bottom: 1px solid $gray
             letter-spacing: 0.13em
-    &__more
-        padding: 80px 0 160px
-        display: flex
-        flex-direction: column
-        align-items: center
-        @media (max-width: 1439px)
-            padding: 45px 0 80px
-        &-link
-            display: inline-block
-            text-align: center
-        &-pic
-            display: inline-block
-            position: relative
-            width: 70px
-            height: 70px
-            margin-bottom: 12px
-            @media (max-width: 1439px)
-                width: 45px
-                height: 45px
-            &::before,
-            &::after
-                content: ''
-                position: absolute
-                background-color: $gray
-                transition: all .5s ease-in
-            &::before
-                top: 50%
-                left: 0
-                transform: translateY(-50%)
-                width: 100%
-                height: 1px
-            &::after
-                top: 0
-                left: 50%
-                transform: translateX(-50%)
-                width: 1px
-                height: 100%
-        &-text
-            font-size: 12px
-            font-family: 'EuropeC', Arial, serif
-            letter-spacing: 0.13em
-            text-transform: uppercase
-        &-link:hover,
-        &-link:focus
-            .catalog__more-pic::before
-                background-color: $green
-                transform: translateY(-50%) scale(1.1)
-            .catalog__more-pic::after
-                background-color: $green
-                transform: translateX(-50%) scale(1.1)
 
 .articles
     padding-bottom: 185px
@@ -785,6 +737,10 @@
     background-size: cover
     min-height: 1076px
     margin-bottom: 145px
+    @media (max-width: 1199px)
+        margin-bottom: 80px
+    @media (max-width: 767px)
+        min-height: 400px
     &__text
         padding-top: 85px
         color: #ffffff
@@ -792,10 +748,256 @@
         font-size: 32px
         letter-spacing: 0.1em
         max-width: 1250px
+        @media (max-width: 767px)
+            font-size: 18px
+            line-height: 1.4
+            padding-bottom: 100px
 
 .advantages
     .h2
         padding-bottom: 75px
+        @media (max-width: 1199px)
+            padding-bottom: 45px
+    &__inner
+        display: flex
+        flex-wrap: wrap
+    .advantage
+        &__item
+            width: calc((100% - 70px)/2)
+            background-color: #f6f6f6
+            margin-right: 70px
+            padding: 60px 32px
+            height: 820px
+            margin-bottom: 65px
+            position: relative
+            @media (max-width: 1199px)
+                height: 680px
+            @media (max-width: 1023px)
+                width: 100%
+                margin-right: 0
+            &:nth-child(2n + 2)
+                margin-right: 0
+        &__title
+            font-family: 'EuropeC', Arial, serif
+            font-size: 18px
+            letter-spacing: 0.07em
+            text-transform: uppercase
+            padding-bottom: 20px
+        &__description
+            padding-top: 36px
+            font-size: 17px
+            font-weight: 300
+            letter-spacing: 0.025em
+            line-height: 30px
+        &__pic
+            position: absolute
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: contain
+            width: 466px
+            height: 374px
+            bottom: 160px
+            left: 50%
+            transform: translateX(-50%)
+            @media (max-width: 1199px)
+                width: 350px
+                height: 281px
+                bottom: 80px
+            @media (max-width: 767px)
+                width: 90%
+                bottom: 32px
+            &--1
+                background-image: url(../img/advantage-1.png)
+            &--2
+                background-image: url(../img/advantage-2.png)
+
+.question
+    padding: 90px 0 95px
+    width: calc((100% - 70px)/2)
+    max-width: 512px
+    @media (max-width: 1439px)
+        max-width: none
+    @media (max-width: 1023px)
+        padding-top: 0
+        width: 100%
+    &__ask
+        font-weight: 300
+        font-size: 14px
+        letter-spacing: 0.05em
+        padding-bottom: 35px
+    .label
+        margin-bottom: 40px
+    .textarea
+        margin-bottom: 40px
+    .btn
+        width: 100%
+        padding: 32px
+
+.contacts__department
+    width: calc((100% - 100px)/2)
+    display: flex
+    @media (max-width: 1439px)
+        width: 100%    
+    @media (max-width: 767px)
+        flex-direction: column
+    &:first-child
+        padding-right: 100px
+        @media (max-width: 1749px)
+            padding-right: 20px
+        @media (max-width: 1439px)
+            margin-bottom: 20px
+            padding-right: 0
+    &-inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: 1439px)
+            flex-direction: column
+    &-section
+        padding-bottom: 178px
+        .h2
+            padding-bottom: 95px
+    &-title
+        font-family: 'Magistral-Book', Arial, serif
+        font-size: 17px
+        letter-spacing: 0.07em
+        line-height: 32px
+        text-transform: uppercase
+        width: 45%
+        @media (max-width: 767px)
+            width: 100%
+    &-data
+        width: 55%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: flex-start
+        @media (max-width: 767px)
+            width: 100%
+    &-numbers
+        width: 100%
+    &-text,
+    &-link
+        font-weight: 300
+        letter-spacing: 0.05em
+        font-size: 12px
+        text-transform: uppercase
+        display: inline-block
+    &-text
+        width: 17%
+        @media (max-width: 1749px)
+            width: 25%
+            white-space: nowrap
+        @media (max-width: 767px)
+            width: 20%
+    &-link
+        width: 28%
+        @media (max-width: 1749px)
+            width: 32%
+            white-space: nowrap
+        @media (max-width: 767px)
+            width: 38%
+
+.press
+    &__article
+        display: flex
+        margin-bottom: 80px
+        @media (max-width: 1023px)
+            flex-direction: column
+    &__info
+        width: calc((100% - 64px)/2)
+        margin-left: 32px
+        padding-left: 58px
+        padding-top: 145px
+        max-width: 680px
+        @media (max-width: 1023px)
+            width: 100%
+            margin-left: 0
+            padding-left: 0
+            max-width: none
+            padding-top: 45px
+        @media (max-width: 767px)
+            padding-top: 20px
+    &__title
+        font-family: 'EuropeC', Arial, serif
+        font-size: 37px
+        letter-spacing: 0.07em
+        text-transform: uppercase
+        line-height: 60px
+        padding-bottom: 25px
+        @media (max-width: 1439px)
+            font-size: 24px
+            line-height: 1.6
+    &__announce
+        font-weight: 300
+        font-size: 19px
+        line-height: 33px
+        letter-spacing: 0.025em
+        padding-bottom: 90px
+        @media (max-width: 1023px)
+            padding-bottom: 20px
+        @media (max-width: 767px)
+            font-size: 16px
+            line-height: 1.5
+    &__pic
+        width: calc((100% - 64px)/2)
+        margin-right: 32px
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+        min-height: 600px
+        @media (max-width: 1023px)
+            width: 100%
+            min-height: 350px
+            margin-right: 0
+        &--1
+            background-image: url(../img/press-1.jpg)
+        &--2
+            background-image: url(../img/press-2.jpg)    
+        &--3
+            background-image: url(../img/press-3.jpg)    
+    .show__more
+        padding: 20px 0 195px
+        @media (max-width: 1023px)
+            padding: 0 0 45px
+
+.news
+    &__inner
+        padding-top: 80px
+    &__year-block
+        display: flex
+        flex-wrap: wrap
+        align-items: flex-start
+    &__item
+        width: calc((100% - 160px)/3)
+        margin-right: 80px
+        margin-bottom: 100px
+        &:nth-child(3n + 3)
+            margin-right: 0
+    &__pic
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: cover
+        height: 344px
+        margin-bottom: 55px
+        &--1
+            background-image: url(../img/news-1.jpg)
+        &--2
+            background-image: url(../img/news-2.jpg)
+    &__info
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+    &__title
+        letter-spacing: 0.025em
+        font-weight: 300
+    &__date
+        font-size: 14px
+        color: #2fb18a
+        font-weight: 300
+        letter-spacing: 0.07em
+    .show__more
+        padding: 0 0 175px
 
         
 
