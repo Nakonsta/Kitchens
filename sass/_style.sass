@@ -39,14 +39,14 @@
         @media (max-width: 1439px)
             display: none
         &-item
-            padding-right: 57px
+            padding-right: 45px
             @media (max-width: 1749px)
                 padding-right: 20px
             &:last-child
                 padding-right: 0
         &-link
             text-transform: uppercase
-            font-size: 11px
+            font-size: 12px
             letter-spacing: 0.13em
             font-family: 'EuropeC', Arial, serif
     &__login
@@ -219,11 +219,19 @@
             letter-spacing: 0.13em
             font-family: 'EuropeC', Arial, serif
     .selectize-dropdown
+        padding-top: 15px
+        padding-bottom: 15px
         .option
             text-transform: uppercase
             font-size: 12px
+            line-height: 2
             letter-spacing: 0.13em
             font-family: 'EuropeC', Arial, serif
+
+.section-tab
+    display: none
+    &--active
+        display: block
 
 .catalog
     &__inner
@@ -408,6 +416,10 @@
     &__right
         padding-right: 72px
         position: relative
+        font-family: 'EuropeC', Arial, serif
+        text-transform: uppercase
+        font-size: 12px
+        letter-spacing: 0.13em
         @media (max-width: 767px)
             padding-right: 0
         &::after,
@@ -418,12 +430,20 @@
             background-color: $gray
             width: 40px
             height: 1px
+            transition: all .5s ease-out
             @media (max-width: 767px)
                 content: none
         &::before
-            top: 9px
+            top: 4px
         &::after
-            top: 16px
+            top: 11px
+        &:hover:before,
+        &:hover::after,
+        &:focus::before,
+        &:focus::after
+            background-color: $green
+            width: 50px
+            right: -10px
     &__item
         outline: none
         &-title
@@ -517,6 +537,7 @@
             text-align: center
     &-phone
         color: #ffffff
+        white-space: nowrap
     &-emails
         width: 100%
         font-size: 11px
@@ -561,6 +582,7 @@
     @media (max-width: 767px)
         padding: 65px 0 45px
     &-round
+        cursor: pointer
         position: absolute
         background-color: $green
         width: 116px
@@ -574,7 +596,7 @@
             content: ''
             position: absolute
             background-color: #ffffff
-            transition: all .5s ease-in
+            transition: all .5s ease-out
         &::before
             top: 50%
             left: 36px
@@ -588,16 +610,23 @@
             width: 1px
             height: 44px
     &-feedback
-        padding-bottom: 135px
+        display: inline-block
+        color: #ffffff
         text-align: center
         font-size: 12px
         font-family: 'EuropeC', Arial, serif
         letter-spacing: 0.13em
         text-transform: uppercase
+        &:hover,
+        &:focus
+            color: #000000
         @media (max-width: 1023px)
             padding-bottom: 80px
         @media (max-width: 767px)
             padding-bottom: 45px
+        &-wrapper
+            text-align: center
+            padding-bottom: 135px
     &-nav
         display: flex
         width: 100%
@@ -657,6 +686,35 @@
         &:focus
             color: #000000
 
+.soc-link
+    display: inline-block
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    background-size: contain
+    width: 15px
+    height: 15px
+    padding-right: 75px
+    &:hover path,
+    &:focus path
+        fill: $green
+    &:last-child
+        padding-right: 0
+    &-vk    
+        width: 19px
+        height: 10px
+    &-youtube
+        width: 17px
+        height: 12px
+    &--large
+        width: 20px
+        height: 20px
+        .soc-link-vk
+            width: 25px
+            height: 15px
+        .soc-link-youtube
+            width: 22px
+            height: 16px
+
 .footer__info
     background-color: $green
     padding-bottom: 55px
@@ -699,25 +757,9 @@
             justify-content: center
             margin-bottom: 24px
         &-link
-            display: inline-block
-            background-repeat: no-repeat
-            background-position: 50% 50%
-            background-size: contain
-            width: 15px
-            height: 15px
-            padding-right: 75px
-    &-vk    
-        width: 19px
-        height: 10px
-        background-image: url(../img/vk.png)
-    &-insta
-        background-image: url(../img/insta.png)
-    &-fb
-        background-image: url(../img/fb.png)
-    &-youtube
-        width: 17px
-        height: 12px
-        background-image: url(../img/youtube.png)
+            &:hover path,
+            &:focus path
+                fill: #ffffff
     &-right
         font-size: 12px
         letter-spacing: 0.05em
@@ -777,6 +819,9 @@
                 margin-right: 0
             &:nth-child(2n + 2)
                 margin-right: 0
+            &:hover .advantage__pic,
+            &:focus .advantage__pic
+                transform: translateX(-50%) scale(1.05)
         &__title
             font-family: 'EuropeC', Arial, serif
             font-size: 18px
@@ -798,6 +843,7 @@
             height: 374px
             bottom: 160px
             left: 50%
+            transition: all .5s ease-out
             transform: translateX(-50%)
             @media (max-width: 1199px)
                 width: 350px
@@ -812,7 +858,7 @@
                 background-image: url(../img/advantage-2.png)
 
 .question
-    padding: 90px 0 95px
+    padding: 110px 0 95px
     width: calc((100% - 70px)/2)
     max-width: 512px
     @media (max-width: 1439px)
@@ -827,9 +873,8 @@
         padding-bottom: 35px
     .label
         margin-bottom: 40px
-    .textarea
-        margin-bottom: 40px
     .btn
+        margin-top: 40px
         width: 100%
         padding: 32px
 
@@ -919,6 +964,7 @@
         @media (max-width: 767px)
             padding-top: 20px
     &__title
+        display: inline-block
         font-family: 'EuropeC', Arial, serif
         font-size: 37px
         letter-spacing: 0.07em
@@ -929,6 +975,7 @@
             font-size: 24px
             line-height: 1.6
     &__announce
+        display: inline-block
         font-weight: 300
         font-size: 19px
         line-height: 33px
@@ -940,22 +987,38 @@
             font-size: 16px
             line-height: 1.5
     &__pic
-        width: calc((100% - 64px)/2)
-        margin-right: 32px
+        width: 100%
         background-repeat: no-repeat
         background-position: 50% 50%
         background-size: cover
-        min-height: 600px
-        @media (max-width: 1023px)
-            width: 100%
-            min-height: 350px
-            margin-right: 0
+        height: 100%
+        position: relative
+        transition: all 0.5s ease-out
+        &-wrapper
+            width: calc((100% - 64px)/2)
+            min-height: 600px
+            overflow: hidden
+            margin-right: 32px
+            &:hover .press__pic,
+            &:focus .press__pic
+                transform: scale(1.05)
+            @media (max-width: 1023px)
+                height: 350px
+                margin-right: 0
+                width: 100%
         &--1
             background-image: url(../img/press-1.jpg)
         &--2
             background-image: url(../img/press-2.jpg)    
         &--3
-            background-image: url(../img/press-3.jpg)    
+            background-image: url(../img/press-3.jpg)   
+        &-link
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+
     .show__more
         padding: 20px 0 195px
         @media (max-width: 1023px)
@@ -964,26 +1027,72 @@
 .news
     &__inner
         padding-top: 80px
+        @media (max-width: 767px)
+            padding-top: 20px
     &__year-block
         display: flex
         flex-wrap: wrap
         align-items: flex-start
+    .tabs
+        @media (max-width: 767px)
+            flex-wrap: wrap
+            justify-content: flex-start
+    .tab
+        @media (max-width: 767px)
+            width: 14%
+        @media (max-width: 575px)
+            width: 20%
+        &--active
+            @media (max-width: 767px)
+                border-bottom-color: transparent
     &__item
         width: calc((100% - 160px)/3)
         margin-right: 80px
         margin-bottom: 100px
+        @media (max-width: 1199px)
+            width: calc((100% - 80px)/2)
+        @media (max-width: 767px)
+            width: 100%
+            margin-right: 0
+            margin-bottom: 65px
         &:nth-child(3n + 3)
             margin-right: 0
+            @media (max-width: 1199px)
+                margin-right: 80px
+            @media (max-width: 767px)
+                margin-right: 0
+        &:nth-child(2n + 2)
+            @media (max-width: 1199px)
+                margin-right: 0
     &__pic
+        position: relative
         background-repeat: no-repeat
         background-position: 50% 50%
         background-size: cover
-        height: 344px
-        margin-bottom: 55px
+        transition: all 0.5s ease-out
+        width: 100%
+        height: 100%
+        &-wrapper
+            overflow: hidden
+            height: 344px
+            margin-bottom: 55px
+            @media (max-width: 1199px)
+                margin-bottom: 32px
+            @media (max-width: 1023px)
+                height: 250px
+            &:hover .news__pic,
+            &:focus .news__pic
+                transform: scale(1.05)
         &--1
             background-image: url(../img/news-1.jpg)
         &--2
             background-image: url(../img/news-2.jpg)
+        &-link
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
     &__info
         display: flex
         align-items: flex-start
@@ -991,6 +1100,7 @@
     &__title
         letter-spacing: 0.025em
         font-weight: 300
+        padding-right: 12px
     &__date
         font-size: 14px
         color: #2fb18a
@@ -998,6 +1108,308 @@
         letter-spacing: 0.07em
     .show__more
         padding: 0 0 175px
+        @media (max-width: 1023px)
+            padding: 0 0 45px
+
+.single-news
+    padding-top: 28px
+    & + .articles
+        padding-top: 150px
+    &__inner
+        height: calc(100vh - 167px)
+        display: flex
+        overflow-y: scroll
+        &::-webkit-scrollbar
+            width: 0px
+            background: rgba(255, 255, 255, 0.0)
+        @media (max-width: 1439px)
+            height: calc(100vh - 117px)
+        @media (max-width: 1199px)
+            flex-direction: column
+            height: auto
+            overflow: auto
+    &__pic
+        width: 56%
+        height: 100%
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        background-image: url(../img/news-3.jpg)
+        @media (max-width: 1199px)
+            height: 400px
+            width: 100%
+        &--press
+            background-image: url(../img/press-3.jpg)
+  
+    &__text
+        width: 44%
+        padding-left: 78px
+        overflow-y: scroll
+        &::-webkit-scrollbar
+            width: 0px
+            background: rgba(255, 255, 255, 0.0)
+        @media (max-width: 1439px)
+            padding-left: 40px
+        @media (max-width: 1199px)
+            overflow: auto
+            padding-left: 0
+            width: 100%
+    &__back
+        display: flex
+        align-items: center
+        padding: 60px 0 155px
+        @media (max-width: 1749px)
+            padding: 40px 0 80px
+        @media (max-width: 1199px)
+            padding-bottom: 40px
+        &-text
+            display: block
+            text-transform: uppercase
+            font-family: 'EuropeC', Arial, serif
+            font-size: 12px
+            letter-spacing: 0.013em
+    &__line
+        width: 0
+        height: 1px
+        background-color: $gray
+        &-wrapper
+            width: 90px
+            padding-right: 20px
+    &__date
+        color: #2fb18a
+        font-weight: 300
+        letter-spacing: 0.07em
+        padding-bottom: 32px
+        font-size: 15px
+    &__title
+        text-transform: uppercase
+        font-family: 'EuropeC', Arial, serif
+        font-size: 36px
+        letter-spacing: 0.09em
+        line-height: 1.9
+        @media (max-width: 1199px)
+            line-height: 1.5
+            font-size: 24px
+    &__subtitle
+        text-transform: uppercase
+    &__p
+        font-size: 18px
+        font-weight: 300
+        letter-spacing: 0.025em
+        line-height: 32px
+        padding: 65px 0
+        @media (max-width: 1199px)
+            padding: 25px 0
+            font-size: 16px
+        &--padding
+            padding-bottom: 250px
+        @media (max-width: 1199px)
+            padding-bottom: 25px
+    &__img
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: 50% 50%
+        height: 480px
+        margin-bottom: 20px
+        @media (max-width: 1199px)
+            height: 320px
+        &--long
+            height: 1080px
+            @media (max-width: 575px)
+                height: 600px
+        &--1
+            background-image: url(../img/news-4.jpg)
+        &--2
+            background-image: url(../img/news-5.jpg)
+        &--3
+            background-image: url(../img/news-6.jpg)
+        &--4
+            background-image: url(../img/news-7.jpg)
+    &__video
+        margin-bottom: 45px
+        height: 424px
+        @media (max-width: 1199px)
+            margin-bottom: 5px
+        @media (max-width: 575px)
+            height: 320px
+    &__share
+        padding: 100px 0 0
+        &-text
+            display: flex
+            align-items: center
+            padding-bottom: 45px
+        &-info
+            font-size: 11px
+            font-weight: 300
+            letter-spacing: 0.05em
+            padding-right: 20px
+        &-line
+            width: 0
+            height: 1px
+            background-color: $gray
+            &-wrapper
+                flex: 1
+                width: 100%
+        .soc-link
+            padding-right: 0
+            margin-right: 80px
+            &:last-child
+                margin-right: 0
+            @media (max-width: 575px)
+                margin-right: 12px
+
+.press-detailed
+    .single-news__p
+        padding-top: 35px
+        @media (max-width: 1199px)
+            padding: 25px 0
+        &--padding
+            padding-bottom: 470px
+            @media (max-width: 1199px)
+                padding-bottom: 25px
+
+.gallery__slider--arrows
+    .slick-arrow
+        opacity: 0
+        transition: all 0.5s ease-out
+        position: absolute
+        font-size: 0
+        border: none
+        border-radius: 50%
+        width: 35px
+        height: 35px
+        background: #333333 url(../img/arrow-white.png) no-repeat 50% 50%
+        background-size: 16px 7px
+        cursor: pointer
+        outline: none
+        z-index: 10
+        top: 50%
+        transform: translateY(-50%)
+    .slick-prev
+        left: 28px
+    .slick-next
+        right: 28px
+        background: #333333 url(../img/arrow-white-right.png) no-repeat 50% 50%
+
+.gallery
+    &__inner
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+    &__item
+        width: calc((100% - 32px)/2)
+        margin-right: 32px
+        margin-bottom: 32px
+        position: relative
+        @media (max-width: 1023px)
+            width: 100%
+            margin-right: 0
+        &:nth-child(2n + 2)
+            margin-right: 0
+        .fancy
+            cursor: default
+        &-slide
+            width: 100%
+        &-layout
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            pointer-events: none
+            background-color: rgba(0,0,0,0.3)
+            z-index: 2
+            transition: all .5s ease-out
+        &:hover .gallery__item-layout,
+        &:focus .gallery__item-layout
+            opacity: 0
+        &:hover .gallery__slider--arrows .slick-arrow,
+        &:focus .gallery__slider--arrows .slick-arrow
+            opacity: 1
+        &-top
+            position: absolute
+            z-index: 5
+            top: 55px
+            left: 28px
+            right: 28px
+            &-info
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-bottom: 18px
+            &-line
+                width: 0
+                background-color: #fff
+                height: 1px
+                &-wrapper
+                    width: 100%
+            &-plus
+                border-radius: 50%
+                width: 30px
+                height: 30px
+                background: #333333 url(../img/plus.png) no-repeat 50% 49%
+                background-size: 9px 9px
+                cursor: pointer
+                
+        &-title
+            text-transform: uppercase
+            font-size: 14px
+            letter-spacing: 0.07em
+            color: #ffffff
+            font-family: 'Magistral-Book', Arial, serif
+        &-pic
+            height: 574px
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: cover
+            @media (max-width: 575px)
+                height: 350px
+            &--1
+                background-image: url(../img/gallery-1.jpg)
+            &--2
+                background-image: url(../img/gallery-2.jpg)
+            &--3
+                background-image: url(../img/gallery-3.jpg)
+            &--4
+                background-image: url(../img/gallery-4.jpg)
+            &--5
+                background-image: url(../img/gallery-5.jpg)
+            &--6
+                background-image: url(../img/gallery-6.jpg)
+            &--7
+                background-image: url(../img/gallery-7.jpg)
+            &--8
+                background-image: url(../img/gallery-8.jpg)
+            &--9
+                background-image: url(../img/gallery-9.jpg)
+            &--10
+                background-image: url(../img/gallery-10.jpeg)
+
+.catalog__item-new
+    height: 100%
+    .catalog__item-inner-new
+        position: relative
+        overflow: hidden
+        height: 100%
+        &:hover
+            .catalog__item-back-new
+                transform: translateY(-100%)
+            .catalog__item-front-new .catalog__item-top
+                display: none
+    .catalog__item-back-new
+        background-color: #fff
+        position: relative
+        transform: translateY(0)
+        height: 100%
+        width: 100%
+        z-index: 2
+        transition: all .5s ease-out
+        .catalog__item-top
+            color: #ffffff
+    .catalog__item-front-new
+        height: 100%
+        z-index: 1
+    
 
         
 

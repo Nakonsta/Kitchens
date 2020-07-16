@@ -20,7 +20,7 @@ ul
 a
     color: #000000
     text-decoration: none
-    transition: all .5s ease-in
+    transition: all .5s ease-out
 
 a:hover,
 a:focus
@@ -29,7 +29,7 @@ a:focus
     outline: none
 
 svg, svg path
-    transition: all .5s ease-in
+    transition: all .5s ease-out
 
 input[type="text"],
 input[type="password"],
@@ -50,8 +50,11 @@ textarea
         letter-spacing: 0.025em
         opacity: 0.6
 
-textarea
+.textarea
     resize: none
+    &__wrapper
+        position: relative
+        margin-bottom: 20px
 
 .form__row
     position: relative
@@ -65,7 +68,7 @@ textarea
     letter-spacing: 0.025em
     font-family: 'RobotoCondensed', Arial, serif
     top: 12px
-    transition: all .5s ease-in
+    transition: all .2s ease-out
     left: 14px
     opacity: 0.6
     pointer-events: none
@@ -79,6 +82,9 @@ textarea
     opacity: 1
 
 label.error
+    position: absolute
+    left: 0
+    bottom: -20px
     color: #b8061f
     font-size: 12px
     letter-spacing: 0.05em
@@ -89,6 +95,7 @@ label.error
     font-size: 32px
     letter-spacing: 0.1em
     margin: 0
+    font-weight: 400
     @media (max-width: 767px)
         font-size: 24px
 
@@ -97,11 +104,16 @@ label.error
     font-size: 24px
     letter-spacing: 0.07em
     margin: 0
+    font-weight: 400
 
 .container 
     width: 100%
     max-width: 1680px
     margin: 0 auto
+    &--right
+        margin: 0
+        margin-right: calc((100% - 1680px)/4)
+        max-width: calc(1680px + ((100% - 1680px)/2))
     @media (max-width: 1749px)
         padding: 0 3%
     @media (max-width: 767px)
@@ -170,7 +182,7 @@ label.error
             content: ''
             position: absolute
             background-color: $gray
-            transition: all .5s ease-in
+            transition: all .5s ease-out
         &::before
             top: 50%
             left: 0

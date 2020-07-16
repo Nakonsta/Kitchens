@@ -18,11 +18,25 @@ $(function(){
                 }
             }
         ]
+    });
+
+    // Слайдеры фотогалерей
+
+    $('.gallery__slider').slick({
+        infinite: false
+    });
+
+    $('body').on('click', '.gallery__item-top-plus', function() {
+        $(this).closest('.gallery__item').find('.fancy').eq(0).trigger('click');
     })
 
     // Модалки
 
     $('.fancy').fancybox();
+
+    $('body').on('click', '.footer__main-round', function() {
+        $('.footer__main-feedback').trigger('click');
+    })
 
     // Стилизация input
 
@@ -34,12 +48,42 @@ $(function(){
         }
     })
 
-    // Табы в форме авторизации
+    // Маски для телефонов
+    $('input[type="tel"]').mask('+7 (000) 000-00-00');
 
+    // Табы для категорий   
+    $('body').on('click', '.categories__item', function() {
+        $('.categories__item').each(function() {
+            $(this).removeClass('categories__item--active');
+        });
+        $(this).addClass('categories__item--active');
+        $('.section-tab').each(function() {
+            $(this).removeClass('section-tab--active');
+        });
+        var selector = '.section-tab[data-category="' + $(this).attr('data-category') + '"]';
+        $(selector).addClass('section-tab--active');
+        if($(this).closest('.main').find('.gallery').length) {
+            $('.gallery__slider').slick('unslick');
+            $('.gallery__slider').slick({
+                infinite: false
+            });
+        }
+    })
+
+    // Табы в форме авторизации
     $('body').on('click', '.modal__tab', function() {
-        $('.modal__tab').removeClass('modal__tab--active');
+        $(this).closest('.modal').find('.modal__tab').each(function() {
+            $(this).removeClass('modal__tab--active');
+        });
         $(this).addClass('modal__tab--active');
-        $('.login-tab__body').hide();
+        if($(this).attr('data-login') == 'auth') {
+            $(this).closest('.modal__flex').addClass('modal__flex--centering');
+        } else {
+            $(this).closest('.modal__flex').removeClass('modal__flex--centering');
+        }
+        $(this).closest('.modal').find('.login-tab__body').each(function() {
+            $(this).hide();
+        });
         var selector = '.login-tab__body[data-login="' + $(this).attr('data-login') + '"]';
         $(selector).show();
     })
@@ -69,20 +113,24 @@ $(function(){
         },
         messages: {
             login__email: {
-                email: "Некорректно введен электронный адрес"
+                required: 'Пожалуйста, введите e-mail',
+                email: 'Некорректно введен электронный адрес'
+            },
+            login__password: {
+                required: 'Пожалуйста, введите пароль',
             }
         }
     });
 
-    $('.login__auth input').each(function() {
-        $(this).keyup(function() {
-            if($('.login__auth').valid()) {
-                $('.login__auth input[type="submit"]').removeClass('btn--disabled');
-            } else {
-                $('.login__auth input[type="submit"]').addClass('btn--disabled');
-            }
-        })
-    });
+    // $('.login__auth input').each(function() {
+    //     $(this).keyup(function() {
+    //         if($('.login__auth').valid()) {
+    //             $('.login__auth input[type="submit"]').removeClass('btn--disabled');
+    //         } else {
+    //             $('.login__auth input[type="submit"]').addClass('btn--disabled');
+    //         }
+    //     })
+    // });
 
     $('.register').validate({
         rules: {
@@ -137,14 +185,103 @@ $(function(){
         }
     });
 
-    $('.register input').each(function() {
-        $(this).keyup(function() {
-            if($('.register').valid()) {
-                $('.register input[type="submit"]').removeClass('btn--disabled');
-            } else {
-                $('.register input[type="submit"]').addClass('btn--disabled');
+    // $('.register input').each(function() {
+    //     $(this).keyup(function() {
+    //         if($('.register').valid()) {
+    //             $('.register input[type="submit"]').removeClass('btn--disabled');
+    //         } else {
+    //             $('.register input[type="submit"]').addClass('btn--disabled');
+    //         }
+    //     })
+    // });
+
+    $('.feedback').validate({
+        rules: {
+            feedback__name: {
+                required: true,
+                minlength: 2
+            },
+            feedback__email: {
+                required: true,
+                email: true
+            },
+            feedback__phone: {
+                required: true
+            },
+            feedback__textarea: {
+                required: true,
+                minlength: 20
             }
-        })
+        },
+        messages: {
+            feedback__name: {
+                required: "Пожалуйста, введите имя",
+                minlength: "Длина имени не должна быть короче 2-х символов"
+            },
+            feedback__email: {
+                required: "Пожалуйста, введите e-mail",
+                email: "Введите корректный e-mail адрес"
+            },
+            feedback__phone: {
+                required: "Пожалуйста, введите телефон"
+            },
+            feedback__textarea: {
+                required: "Пожалуйста, введите техт комментария",
+                minlength: "Минимальная длина комментария — 20 символов"
+            }
+        }
+    });
+
+    $('.forget').validate({
+        rules: {
+            forget__email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            forget__email: {
+                required: "Пожалуйста, введите e-mail",
+                email: "Введите корректный e-mail адрес"
+            }
+        }
+    });
+
+    $('.question__form').validate({
+        rules: {
+            question__name: {
+                required: true,
+                minlength: 2
+            },
+            question__email: {
+                required: true,
+                email: true
+            },
+            question__phone: {
+                required: true
+            },
+            question__textarea: {
+                required: true,
+                minlength: 20
+            }
+        },
+        messages: {
+            question__name: {
+                required: "Пожалуйста, введите имя",
+                minlength: "Длина имени не должна быть короче 2-х символов"
+            },
+            question__email: {
+                required: "Пожалуйста, введите e-mail",
+                email: "Введите корректный e-mail адрес"
+            },
+            question__phone: {
+                required: "Пожалуйста, введите телефон"
+            },
+            question__textarea: {
+                required: "Пожалуйста, введите техт комментария",
+                minlength: "Минимальная длина комментария — 20 символов"
+            }
+        }
     });
 
     // Анимации

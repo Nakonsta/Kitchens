@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elikor — новости</title>
+    <title>Elikor — фотогалерея</title>
 
     <link rel="stylesheet" href="./css/plugins/selectize.css">
     <link rel="stylesheet" href="./css/plugins/slick.css">
@@ -67,160 +67,196 @@
         </div>
     </header>
     <main class="main">
-        <section class="page-title">
+        <section class="categories">
             <div class="container">
-                <h1 class="h1">Новости</h1>
+                <div class="categories__inner">
+                    <a href="#" class="categories__item categories__item--active" data-category="1">Фотогалерея</a>
+                    <a href="#" class="categories__item" data-category="2">вертикальные</a>
+                    <a href="#" class="categories__item" data-category="3">настенные</a>
+                    <a href="#" class="categories__item">классические</a>
+                    <a href="#" class="categories__item categories__item--edge">угловые</a>
+                    <a href="#" class="categories__item">островные</a>
+                    <a href="#" class="categories__item">стандартные</a>
+                    <a href="#" class="categories__item">встраиваемые</a>
+                    <a href="#" class="categories__item">телескопические</a>
+                    <a href="#" class="categories__item">аксессуары</a>
+                </div>
             </div>
         </section>
-        <section class="news">
+        <section class="gallery section-tab section-tab--active" data-category="1">
             <div class="container">
-                <div class="tabs">
-                    <a href="#" class="tab tab--active" data-tab="2020">2020</a>
-                    <a href="#" class="tab" data-tab="2019">2019</a>
-                    <a href="#" class="tab" data-tab="2018">2018</a>
-                    <a href="#" class="tab" data-tab="2017">2017</a>
-                    <a href="#" class="tab" data-tab="2016">2016</a>
-                    <a href="#" class="tab" data-tab="2015">2015</a>
-                    <a href="#" class="tab" data-tab="2014">2014</a>
-                    <a href="#" class="tab" data-tab="2013">2013</a>
-                    <a href="#" class="tab" data-tab="2012">2012</a>
-                </div>
-                <div class="news__inner">
-                    <div class="news__year-block tab__block" data-tab="2020">
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
+                <div class="gallery__inner">
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-1" href="./img/gallery-1.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--1"></div>
+                                </a>
                             </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-1" href="./img/gallery-7.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--7"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-1" href="./img/gallery-10.jpeg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--10"></div>
+                                </a>
                             </div>
                         </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Вытяжка Агат</div>
+                                <div class="gallery__item-top-plus"></div>
                             </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
-                            </div>
-                        </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
-                            </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="news__year-block tab__block" data-tab="2019" style="display: none;">
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-2" href="./img/gallery-1.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--1"></div>
+                                </a>
                             </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-2" href="./img/gallery-6.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--6"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-2" href="./img/gallery-8.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--8"></div>
+                                </a>
                             </div>
                         </div>
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--2">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Elikor Art</div>
+                                <div class="gallery__item-top-plus"></div>
                             </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Новинка! Невероятно<br />компактная вытяжка FLAT 42</a>
-                                <div class="news__date">13/02</div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="news__year-block tab__block" data-tab="2018" style="display: none;">
-                        <div class="news__item">
-                            <div class="news__pic-wrapper">
-                                <div class="news__pic news__pic--1">
-                                    <a href="#" class="news__pic-link"></a>
-                                </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-3" href="./img/gallery-2.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--2"></div>
+                                </a>
                             </div>
-                            <div class="news__info">
-                                <a href="#" class="news__title">Посещение главой<br />региона завода "ЭЛИКОР"</a>
-                                <div class="news__date">13/02</div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-3" href="./img/gallery-8.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--8"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-3" href="./img/gallery-9.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--9"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Вытяжка Аметист</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-4" href="./img/gallery-3.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--3"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-4" href="./img/gallery-6.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--6"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-4" href="./img/gallery-10.jpeg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--10"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Вытяжка Вента</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-5" href="./img/gallery-4.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--4"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-5" href="./img/gallery-7.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--7"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-5" href="./img/gallery-8.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--8"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Elikor Art</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-6" href="./img/gallery-5.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--5"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-6" href="./img/gallery-6.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--6"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-6" href="./img/gallery-7.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--7"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Elikor Art</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
                             </div>
                         </div>
                     </div>
@@ -231,6 +267,201 @@
                         <br />
                         <span class="show__more-text">Загрузить еще</span>
                     </a>
+                </div>
+            </div>
+        </section>
+        <section class="gallery section-tab" data-category="2">
+            <div class="container">
+                <div class="gallery__inner">
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-7" href="./img/gallery-1.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--1"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-7" href="./img/gallery-7.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--7"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-7" href="./img/gallery-10.jpeg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--10"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Вытяжка Агат</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show__more">
+                    <a href="#" class="show__more-link">
+                        <span class="show__more-pic"></span>
+                        <br />
+                        <span class="show__more-text">Загрузить еще</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="gallery section-tab" data-category="3">
+            <div class="container">
+                <div class="gallery__inner">
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-8" href="./img/gallery-1.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--1"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-8" href="./img/gallery-7.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--7"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-8" href="./img/gallery-10.jpeg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--10"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Вытяжка Агат</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery__item">
+                        <div class="gallery__item-layout"></div>
+                        <div class="gallery__slider gallery__slider--arrows">
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-9" href="./img/gallery-1.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--1"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-9" href="./img/gallery-6.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--6"></div>
+                                </a>
+                            </div>
+                            <div class="gallery__item-slide">
+                                <a data-fancybox="images-9" href="./img/gallery-8.jpg" class="fancy">
+                                    <div class="gallery__item-pic gallery__item-pic--8"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="gallery__item-top">
+                            <div class="gallery__item-top-info">
+                                <div class="gallery__item-title">Elikor Art</div>
+                                <div class="gallery__item-top-plus"></div>
+                            </div>
+                            <div class="gallery__item-top-line-wrapper">
+                                <div class="gallery__item-top-line animated-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="show__more">
+                    <a href="#" class="show__more-link">
+                        <span class="show__more-pic"></span>
+                        <br />
+                        <span class="show__more-text">Загрузить еще</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="articles articles__block">
+            <div class="container">
+                <div class="articles__top">
+                    <div class="articles__left">
+                        <div class="section__title">Статьи</div>
+                        <div class="articles__prev"></div>
+                        <div class="articles__next"></div>
+                    </div>
+                    <a href="#" class="articles__right">
+                        Все статьи
+                    </a>
+                </div>
+                <div class="articles__slider-wrapper">
+                    <div class="articles__slider">
+                        <div class="articles__item">
+                            <div class="articles__item-inner">
+                                <a href="#" class="articles__item-title">
+                                    Обзор кухонной вытяжки ELIKOR Кварц
+                                </a>
+                                <div class="articles__item-annonce">
+                                    Новая вытяжка компании сочетает самые эффективные технические решения бренда и новый дизайн без острых углов
+                                </div>
+                                <div class="articles__item-read">
+                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
+                                    <span class="articles__item-read-line">
+                                        <span class="articles__item-read-animate"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles__item">
+                            <div class="articles__item-inner">
+                                <a href="#" class="articles__item-title">
+                                    Воздухоочиститель кухонный — ELIKOR GraFIt
+                                </a>
+                                <div class="articles__item-annonce">
+                                    Elikor Graﬁt будет ярким акцентом кухни, при этом в полной мере справляясь с возложенными на нее практическими функциями
+                                </div>
+                                <div class="articles__item-read">
+                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
+                                    <span class="articles__item-read-line">
+                                        <span class="articles__item-read-animate"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles__item">
+                            <div class="articles__item-inner">
+                                <a href="#" class="articles__item-title">
+                                    Обзор кухонной вытяжки ELIKOR Кварц
+                                </a>
+                                <div class="articles__item-annonce">
+                                    Новая вытяжка компании сочетает самые эффективные технические решения бренда и новый дизайн без острых углов
+                                </div>
+                                <div class="articles__item-read">
+                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
+                                    <span class="articles__item-read-line">
+                                        <span class="articles__item-read-animate"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="articles__item">
+                            <div class="articles__item-inner">
+                                <a href="#" class="articles__item-title">
+                                    Воздухоочиститель кухонный — ELIKOR GraFIt
+                                </a>
+                                <div class="articles__item-annonce">
+                                    Elikor Graﬁt будет ярким акцентом кухни, при этом в полной мере справляясь с возложенными на нее практическими функциями
+                                </div>
+                                <div class="articles__item-read">
+                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
+                                    <span class="articles__item-read-line">
+                                        <span class="articles__item-read-animate"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -409,7 +640,7 @@
                     </div>
                 </div>
                 <div class="login-tab__body" data-login="auth">
-                    <form class="login__auth submit-activate">
+                    <form class="login__auth">
                         <div class="form__row">
                             <input name="login__email" type="email" class="input" id="login__email" required>
                             <label for="login__email" class="label">Электронная почта*</label>
@@ -426,7 +657,7 @@
                     </form>
                 </div>
                 <div class="login-tab__body" data-login="register" style="display: none;">
-                    <form class="register submit-activate">
+                    <form class="register">
                         <div class="form__row">
                             <input name="register__name" type="text" class="input" id="register__name" required>
                             <label for="register__name" class="label">Имя*</label>
@@ -515,7 +746,7 @@
         </div>
     </div>
     <!-- End Modals -->
-
+    
     <script src="./js/plugins/jquery.min.js"></script>
     <script src="./js/plugins/selectize.min.js"></script>
     <script src="./js/plugins/slick.min.js"></script>
