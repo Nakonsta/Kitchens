@@ -19,7 +19,7 @@
         width: 100%
         padding-bottom: 20px
     &__title
-        font-family: 'Magistral-Book', Arial, serif
+        font-family: 'Magistral-Book', Arial, sans-serif
         font-size: 32px
         letter-spacing: 0.07em
         padding-bottom: 35px
@@ -95,3 +95,113 @@
         letter-spacing: 0.05em
         padding-top: 12px
         padding-left: 16px
+#product
+    width: 1920px
+    padding-left: 0
+    padding-right: 0
+
+.modal-product
+    &__inner
+        display: flex
+        align-items: center
+        @media (max-width: 1439px)
+            flex-direction: column
+    &__main
+        width: 65%
+        position: relative
+        text-align: center
+        @media (max-width: 1439px)
+            margin-bottom: 20px
+        @media (max-width: 1199px)
+            width: 100%
+        @media (max-width: 575px)
+            padding: 0 15px
+    &__main-photo
+        min-height: 60vh
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: contain
+    &__tabs
+        width: 35%
+        display: flex
+        flex-wrap: wrap
+        padding-right: 155px
+        @media (max-width: 1439px)
+            width: 100%
+            padding: 0 20px
+            justify-content: center
+    &__tab
+        width: 210px
+        height: 210px
+        padding: 45px
+        background-color: #f6f6f6
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        background-size: 140px
+        margin-top: 12px
+        margin-right: 12px
+        &--active
+            background-color: #d8d8d8
+        &[data-around="true"]
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 21px
+                left: 20px
+                width: 24px
+                height: 14px
+                background: url(../img/360-big.png) no-repeat 50% 50%
+                background-size: contain
+        &--1
+            background-image: url(../img/product-7.png)
+        &--2
+            background-image: url(../img/product-2.png)
+        &:nth-child(2n + 2)
+            margin-right: 0
+            @media (max-width: 1439px)
+                margin-right: 12px
+    &__around
+        opacity: 0
+        text-align: center
+        padding: 100px 85px 0
+        font-weight: 300
+        font-size: 17px
+        letter-spacing: 0.025em
+        position: relative
+        display: inline-block
+        &::before
+            content: ''
+            position: absolute
+            top: 102px
+            left: 0
+            width: 48px
+            height: 29px
+            background: url(../img/360-big.png) no-repeat 50% 50%
+            background-size: contain
+        &--active
+            opacity: 1
+    &__arrow
+        transition: all 0.5s ease-out
+        position: absolute
+        font-size: 0
+        border: none
+        border-radius: 50%
+        width: 35px
+        height: 35px
+        background: #333333 url(../img/arrow-white.png) no-repeat 50% 50%
+        background-size: 16px 7px
+        cursor: pointer
+        outline: none
+        z-index: 10
+        top: 50%
+        transform: translateY(-50%)
+        &.arrow-prev
+            left: 130px
+            @media (max-width: 1439px)
+                left: 32px
+        &.arrow-next
+            right: 180px
+            background: #333333 url(../img/arrow-white-right.png) no-repeat 50% 50%
+            @media (max-width: 1439px)
+                right: 32px

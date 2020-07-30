@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elikor — все продукты</title>
+    <title>Elikor — детальная товара</title>
 
     <link rel="stylesheet" href="./css/plugins/selectize.css">
     <link rel="stylesheet" href="./css/plugins/slick.css">
@@ -107,746 +107,612 @@
         </div>
     </header>
     <main class="main">
-        <section class="categories">
-            <div class="container">
-                <div class="categories__inner">
-                    <a href="#" class="categories__item categories__item--active" data-category="1">Вся продукция</a>
-                    <a href="#" class="categories__item" data-category="2">вертикальные</a>
-                    <a href="#" class="categories__item" data-category="3">настенные</a>
-                    <a href="#" class="categories__item">классические</a>
-                    <a href="#" class="categories__item categories__item-edge">угловые</a>
-                    <a href="#" class="categories__item">островные</a>
-                    <a href="#" class="categories__item">стандартные</a>
-                    <a href="#" class="categories__item">встраиваемые</a>
-                    <a href="#" class="categories__item">телескопические</a>
-                    <a href="#" class="categories__item">аксессуары</a>
+        <section class="single-product">
+            <div class="container container--right">
+                <div class="single-product__inner">
+                    <div class="single-product__pics">
+                        <a href="#product" class="single-product__pics-link fancy"></a>
+                        <div class="single-product__pics-inner slick-slider--arrows">
+                            <div class="single-product__pic single-product__pic--1">
+                                <div href="#product" class="single-product__pic-360"></div>
+                            </div>
+                            <div class="single-product__pic single-product__pic--2"></div>
+                            <div class="single-product__video">
+                                <iframe width="100%" height="840" src="https://www.youtube.com/embed/3sJ8qqaYMgA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>    
+                        </div>
+                    </div>
+                    <div class="single-product__text">
+                        <div class="single-product__title">Оптима</div>
+                        <div class="single-product__about">
+                            <span class="single-product__collection">Коллекция Классика</span> /
+                            <span class="single-product__article">694762</span>
+                        </div>
+                        <div class="single-product__selects">
+                            <div class="single-product__select">
+                                <div class="single-product__select-label">Цвет</div>
+                                <select name="" id="" class="select-js">
+                                    <option value="Silver">Серебристый</option>
+                                    <option value="Golden">Золотистый</option>
+                                    <option value="White">Белый</option>
+                                </select>
+                            </div>
+                            <div class="single-product__select">
+                                <div class="single-product__select-label">Производительность</div>
+                                <select name="" id="" class="select-js">
+                                    <option value="Silver">400 м&sup3;/ч</option>
+                                    <option value="Golden">480 м&sup3;/ч</option>
+                                    <option value="White">520 м&sup3;/ч</option>
+                                </select>
+                            </div>
+                            <div class="single-product__selects-group">
+                                <div class="single-product__select">
+                                    <div class="single-product__select-label">Ширина</div>
+                                    <select name="" id="" class="select-js">
+                                        <option value="Silver">500 мм</option>
+                                        <option value="Golden">520 мм</option>
+                                        <option value="White">540 мм</option>
+                                    </select>
+                                </div>
+                                <div class="single-product__select">
+                                    <div class="single-product__select-label">Высота</div>
+                                    <select name="" id="" class="select-js">
+                                        <option value="Silver">500 мм</option>
+                                        <option value="Golden">520 мм</option>
+                                        <option value="White">540 мм</option>
+                                    </select>
+                                </div>
+                                <div class="single-product__select">
+                                    <div class="single-product__select-label">Глубина</div>
+                                    <select name="" id="" class="select-js">
+                                        <option value="Silver">500 мм</option>
+                                        <option value="Golden">520 мм</option>
+                                        <option value="White">540 мм</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-product__buy">
+                            <div class="single-product__price-info">
+                                <div class="single-product__instock single-product__instock--absent">Нет в наличии</div>
+                                <div class="single-product__price">6 290 Р</div>
+                            </div>
+                            <div class="single-product__buy-btn">
+                                <a class="btn btn--disabled">Купить</a>
+                            </div>
+                            <a href="#" class="single-product__inform">Сообщить о поступлении</a>
+                        </div>
+                        <div class="single-product__actions">
+                            <div>
+                                <span class="single-product__favorite">
+                                    в избранное
+                                    <a href="#" class="single-product__link"></a>
+                                </span>
+                                <span class="single-product__compare">
+                                    в сравнение
+                                    <a href="#" class="single-product__link"></a>
+                                </span>
+                            </div>
+                            <div class="single-product__question">
+                                Вопрос онлайн
+                                <a href="#" class="single-product__link"></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="sort">
+        <section class="chacteristics">
             <div class="container">
-                <div class="sort__inner">
-                    <select name="sort-popular" id="sort-popular" class="sort__select sort__select-js">
-                        <option value="placeholder">По популярности</option>
-                        <option value="option-one">Первая опция</option>
-                        <option value="option-two">Вторая опция с длинным подробным описанием</option>
-                        <option value="option-three">Третья опция</option>
-                    </select>
-                    <select name="sort-decoration" id="sort-decoration" class="sort__select sort__select-js">
-                        <option value="placeholder">Обрамление</option>
-                        <option value="option-one">Первая опция</option>
-                        <option value="option-two">Вторая опция</option>
-                        <option value="option-three">Третья опция</option>
-                    </select>
-                    <select name="sort-productivity" id="sort-productivity" class="sort__select sort__select-js">
-                        <option value="placeholder">Производительность</option>
-                        <option value="option-one">Первая опция</option>
-                        <option value="option-two">Вторая опция</option>
-                        <option value="option-three">Третья опция</option>
-                    </select>
-                    <select name="sort-color" id="sort-color" class="sort__select sort__select-js">
-                        <option value="placeholder">Цвет</option>
-                        <option value="option-one">Первая опция</option>
-                        <option value="option-two">Вторая опция</option>
-                        <option value="option-three">Третья опция</option>
-                    </select>
-                    <select name="sort-width" id="sort-width" class="sort__select sort__select-js">
-                        <option value="placeholder">Ширина</option>
-                        <option value="option-one">Первая опция</option>
-                        <option value="option-two">Вторая опция</option>
-                        <option value="option-three">Третья опция</option>
-                    </select>
+                <div class="chacteristics__inner">
+                    <div class="chacteristics__tabs">
+                        <div class="chacteristics__tab chacteristics__tab--active" data-product="chacteristics">Характеристики</div>
+                        <div class="chacteristics__tab" data-product="instructions">Инструкции</div>
+                        <div class="chacteristics__tab" data-product="drawing">Чертеж</div>
+                        <div class="chacteristics__tab" data-product="guarantee">Гарантия</div>
+                        <div class="chacteristics__tab" data-product="delivery">Доставка и оплата</div>
+                        <div class="chacteristics__tab" data-product="reviews">Отзывы <span class="chacteristics__reviews">3</span></div>
+                    </div>
+                    <div class="chacteristics__blocks">
+                        <div class="chacteristics__block chacteristics__block--active" data-product="chacteristics">
+                            <div class="chacteristics__table">
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Установка каминная</div>
+                                    <div class="chacteristics__value">Пристенная</div>
+                                </div>
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Размеры (ВхШхГ) </div>
+                                    <div class="chacteristics__value">102х60х50 см</div>
+                                </div>
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Ширина встраивания</div>
+                                    <div class="chacteristics__value">60 см</div>
+                                </div>
+                                <div class="chacteristics__row chacteristics__row--more">
+                                    <div class="chacteristics__name">Установка каминная</div>
+                                    <div class="chacteristics__value">Пристенная</div>
+                                </div>
+                                <div class="chacteristics__row chacteristics__row--more">
+                                    <div class="chacteristics__name">Размеры (ВхШхГ) </div>
+                                    <div class="chacteristics__value">102х60х50 см</div>
+                                </div>
+                                <div class="chacteristics__row chacteristics__row--more">
+                                    <div class="chacteristics__name">Ширина встраивания</div>
+                                    <div class="chacteristics__value">60 см</div>
+                                </div>
+                            </div>
+                            <div class="business">
+                                <div class="business__inner">
+                                    <a href="#" class="business__link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chacteristics__block chacteristics__block--instruction" data-product="instructions">
+                            <a href="./instruction.pdf" class="chacteristics__block-link--instruction" download>Скачать руководство по эксплуатации</a>
+                        </div>
+                        <div class="chacteristics__block" data-product="drawing">
+                            <div class="chacteristics__drawing"></div>
+                        </div>
+                        <div class="chacteristics__block chacteristics__block--guarantee" data-product="guarantee">
+                            <div class="chacteristics__block-title">Гарантия</div>
+                            <div class="chacteristics__block-text">
+                                На все товары, представленные на сайте действует гарантия, представленная производителем, но не менее 1 года.
+                                Все товары представленные в нашем магазине, проходят обязательную сертификацию.
+                                Все наши вытяжки оборудованы итальянскими турбинами. Гарантия на турбину 5 лет. Гарантия на все остальные части вытяжки 1 год.
+                            </div>
+                            <div class="chacteristics__block-title">Возврат</div>
+                            <div class="chacteristics__block-text">
+                                Возврат товара можно разделить на 2 случая - возврат некачественного (бракованного) товара и возврат товара надлежащего качества (не понравился по каким либо параметрам) 
+                            </div>
+                            <div class="business">
+                                <div class="container">
+                                    <div class="business__inner">
+                                        <a href="#" class="business__link">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chacteristics__block chacteristics__block--delivery" data-product="delivery">
+                            <div class="chacteristics__table">
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Стоимость</div>
+                                    <div class="chacteristics__value">Бесплатно</div>
+                                </div>
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Срок доставки</div>
+                                    <div class="chacteristics__value">До 3х дней</div>
+                                </div>
+                                <div class="chacteristics__row">
+                                    <div class="chacteristics__name">Сумма заказа</div>
+                                    <div class="chacteristics__value">От 0 рублей</div>
+                                </div>
+                            </div>
+                            <p class="chacteristics__block-p">
+                                Отправка происходит по вторникам и пятницам.
+                                После поступления заказа в ПВЗ, с Вами свяжутся сотрудники ПВЗ, а на телефон придет SMS-сообщение.
+                                Оплата происходит при получении товара. Перед получением Вы можете распаковать заказ и проверить его на комплектность, отсутствие брака, работоспособность.
+                            </p>
+                            <p class="chacteristics__block-p">
+                                При получении заказа, Вы можете отказаться только от всего заказа целиком. Если Вы хотите отказаться от части заказа, Вы должны связаться с нами по телефону 8-800-250-54-19, и мы подскажем Вам как это лучше сделать.
+                            </p>
+                        </div>
+                        <div class="chacteristics__block chacteristics__block--reviews" data-product="reviews">
+                            <div class="chacteristics__block-p">
+                                На этот товар пока нет отзывов<br />
+                                Отзывы могут оставлять только авторизованные пользователи
+                            </div>
+                            <div class="chacteristics__block-review">
+                                <div class="chacteristics__block-review-date">13.12.20</div>
+                                <div class="chacteristics__block-review-name">Константин Константинов</div>
+                                <div class="chacteristics__block-review-text">
+                                    Очень красивая и удобная вытяжка за свои деньги. Десять из десяти!
+                                </div>
+                            </div>
+                            <div class="chacteristics__block-review">
+                                <div class="chacteristics__block-review-date">13.12.20</div>
+                                <div class="chacteristics__block-review-name">Константин Константинов</div>
+                                <div class="chacteristics__block-review-text">
+                                    Очень красивая и удобная вытяжка за свои деньги. Десять из десяти!
+                                </div>
+                            </div>
+                            <div class="chacteristics__block-review">
+                                <div class="chacteristics__block-review-date">13.12.20</div>
+                                <div class="chacteristics__block-review-name">Константин Константинов</div>
+                                <div class="chacteristics__block-review-text">
+                                    Очень красивая и удобная вытяжка за свои деньги. Десять из десяти!
+                                </div>
+                            </div>
+                            <div class="show__more">
+                                <a href="#" class="show__more-link">
+                                    <span class="show__more-pic"></span>
+                                    <br />
+                                    <span class="show__more-text">Оставить отзыв</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="catalog section-tab section-tab--active" data-category="1">
+        <section class="features">
             <div class="container">
-                <div class="catalog__inner">
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
+                <div class="features__inner">
+                    <div class="features__title">
+                        <div class="features__scale">
+                            <div class="features__scale-num features__scale-num--start features__scale-num--active">01</div>
+                            <div class="features__scale-num">05</div>
+                        </div>
+                        <div class="features__title-text">Особенности и преимущества модели</div>
+                    </div>
+                    <div class="features__items">
+                        <div class="features__items-block">
+                            <div class="features__item">
+                                <div class="features__item-bg features__item-bg--1">
+                                    <div class="features__item-pic features__item-pic--1"></div>
                                 </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
+                                <div class="features__item-title">Хит продаж</div>
+                                <div class="features__item-text">
+                                    Одна из самых популярных моделей в 2020 году. 
+                                    С 2016 года не раз попадала в тренды и использовалась 
+                                    лучшими дизайнерами интерьеров
+                                </div>
+                            </div>
+                            <div class="features__item">
+                                <div class="features__item-bg features__item-bg--2">
+                                    <div class="features__item-pic features__item-pic--2"></div>
+                                </div>
+                                <div class="features__item-title">Гарантия 5 лет</div>
+                                <div class="features__item-text">
+                                    Надежная вытяжка для повседневного использования,
+                                    подлежащяя гарантии на 5 лет и месяцу месплатного
+                                    сервисного обслуживания
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__items-block">
+                            <div class="features__item">
+                                <div class="features__item-bg features__item-bg--1">
+                                    <div class="features__item-pic features__item-pic--1"></div>
+                                </div>
+                                <div class="features__item-title">Хит продаж</div>
+                                <div class="features__item-text">
+                                    Одна из самых популярных моделей в 2020 году. 
+                                    С 2016 года не раз попадала в тренды и использовалась 
+                                    лучшими дизайнерами интерьеров
+                                </div>
+                            </div>
+                            <div class="features__item">
+                                <div class="features__item-bg features__item-bg--2">
+                                    <div class="features__item-pic features__item-pic--2"></div>
+                                </div>
+                                <div class="features__item-title">Гарантия 5 лет</div>
+                                <div class="features__item-text">
+                                    Надежная вытяжка для повседневного использования,
+                                    подлежащяя гарантии на 5 лет и месяцу месплатного
+                                    сервисного обслуживания
+                                </div>
+                            </div>
+                        </div>
+                        <div class="features__items-block">
+                            <div class="features__item">
+                                <div class="features__item-bg features__item-bg--1">
+                                    <div class="features__item-pic features__item-pic--1"></div>
+                                </div>
+                                <div class="features__item-title">Хит продаж</div>
+                                <div class="features__item-text">
+                                    Одна из самых популярных моделей в 2020 году. 
+                                    С 2016 года не раз попадала в тренды и использовалась 
+                                    лучшими дизайнерами интерьеров
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="show__more">
-                    <a href="#" class="show__more-link">
-                        <span class="show__more-pic"></span>
-                        <br />
-                        <span class="show__more-text">Загрузить еще</span>
-                    </a>
                 </div>
             </div>
         </section>
-        <section class="catalog section-tab" data-category="2">
-            <div class="container">
-                <div class="catalog__inner">
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="product-slider__section">
+            <div class="product-slider__inner">
+                <div class="product-slider slick-slider--arrows">
+                    <div class="product-slider__slide">
+                        <div class="product-slide__pic product-slide__pic--1"></div>
+                        <div class="product-slide__text">
+                            Настенная вытяжка имеет простойи элегантный дизайн. Модель выполнена в цвете «нержавеющая сталь» и может интегрирована в любой современный кухонный интерьер. Корпус дополнен козырьком из прозрачного стекла, который защищает от брызг. 
                         </div>
                     </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="product-slider__slide">
+                        <div class="product-slide__pic product-slide__pic--2"></div>
+                        <div class="product-slide__text">
+                            Настенная вытяжка имеет простойи элегантный дизайн. Модель выполнена в цвете «нержавеющая сталь» и может интегрирована в любой современный кухонный интерьер. Корпус дополнен козырьком из прозрачного стекла, который защищает от брызг. 
                         </div>
                     </div>
-                </div>
-                <div class="show__more">
-                    <a href="#" class="show__more-link">
-                        <span class="show__more-pic"></span>
-                        <br />
-                        <span class="show__more-text">Загрузить еще</span>
-                    </a>
+                    <div class="product-slider__slide">
+                        <div class="product-slide__pic product-slide__pic--3"></div>
+                        <div class="product-slide__text">
+                            Настенная вытяжка имеет простойи элегантный дизайн. Модель выполнена в цвете «нержавеющая сталь» и может интегрирована в любой современный кухонный интерьер. Корпус дополнен козырьком из прозрачного стекла, который защищает от брызг. 
+                        </div>
+                    </div>
+                    <div class="product-slider__slide">
+                        <div class="product-slide__pic product-slide__pic--4"></div>
+                        <div class="product-slide__text">
+                            Настенная вытяжка имеет простойи элегантный дизайн. Модель выполнена в цвете «нержавеющая сталь» и может интегрирована в любой современный кухонный интерьер. Корпус дополнен козырьком из прозрачного стекла, который защищает от брызг. 
+                        </div>
+                    </div>
+                    <div class="product-slider__slide">
+                        <div class="product-slide__pic product-slide__pic--5"></div>
+                        <div class="product-slide__text">
+                            Настенная вытяжка имеет простойи элегантный дизайн. Модель выполнена в цвете «нержавеющая сталь» и может интегрирована в любой современный кухонный интерьер. Корпус дополнен козырьком из прозрачного стекла, который защищает от брызг. 
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="catalog section-tab" data-category="3">
-            <div class="container">
-                <div class="catalog__inner">
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Elikor Art</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Дельта</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="catalog__item-wrapper">
-                        <div class="catalog__item">
-                            <div class="catalog__item-inner">
-                                <div class="catalog__item-front">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-pic"></div>
-                                </div>
-                                <div class="catalog__item-back">
-                                    <div class="catalog__item-top">
-                                        <div class="catalog__item-top-text">
-                                            <div class="catalog__item-title">Жемчуг</div>
-                                            <div class="catalog__item-price ruble">7 790</div>
-                                        </div>
-                                        <div class="catalog__item-top-line animated-line"></div>
-                                    </div>
-                                    <div class="catalog__item-interior"></div>
-                                    <div class="catalog__item-info">
-                                        <div class="catalog__item-left">
-                                            <div class="catalog__item-text">Производительность</div>
-                                            <div class="catalog__item-text">Количество скоростей</div>
-                                            <div class="catalog__item-text">Ширина</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
-                                        </div>
-                                        <div class="catalog__item-middle">
-                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
-                                            <div class="catalog__item-text">4, Agate, Таймер</div>
-                                            <div class="catalog__item-text">500 мм</div>
-                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
-                                        </div>
-                                        <div class="catalog__item-right"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="show__more">
-                    <a href="#" class="show__more-link">
-                        <span class="show__more-pic"></span>
-                        <br />
-                        <span class="show__more-text">Загрузить еще</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="articles articles__block">
+        <section class="other-products">
             <div class="container">
                 <div class="articles__top">
                     <div class="articles__left">
-                        <div class="section__title">Статьи</div>
-                        <div class="articles__prev"></div>
-                        <div class="articles__next"></div>
+                        <div class="section__title">Другие модели</div>
                     </div>
                     <a href="#" class="articles__right">
-                        Все статьи
+                        Вся продукция
                     </a>
                 </div>
-                <div class="articles__slider-wrapper">
-                    <div class="articles__slider">
-                        <div class="articles__item">
-                            <div class="articles__item-inner">
-                                <a href="#" class="articles__item-title">
-                                    Обзор кухонной вытяжки ELIKOR Кварц
-                                </a>
-                                <div class="articles__item-annonce">
-                                    Новая вытяжка компании сочетает самые эффективные технические решения бренда и новый дизайн без острых углов
+                <div class="catalog__inner">
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Elikor Art</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
                                 </div>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles__item">
-                            <div class="articles__item-inner">
-                                <a href="#" class="articles__item-title">
-                                    Воздухоочиститель кухонный — ELIKOR GraFIt
-                                </a>
-                                <div class="articles__item-annonce">
-                                    Elikor Graﬁt будет ярким акцентом кухни, при этом в полной мере справляясь с возложенными на нее практическими функциями
-                                </div>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="articles__item">
-                            <div class="articles__item-inner">
-                                <a href="#" class="articles__item-title">
-                                    Обзор кухонной вытяжки ELIKOR Кварц
-                                </a>
-                                <div class="articles__item-annonce">
-                                    Новая вытяжка компании сочетает самые эффективные технические решения бренда и новый дизайн без острых углов
-                                </div>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Elikor Art</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="articles__item">
-                            <div class="articles__item-inner">
-                                <a href="#" class="articles__item-title">
-                                    Воздухоочиститель кухонный — ELIKOR GraFIt
-                                </a>
-                                <div class="articles__item-annonce">
-                                    Elikor Graﬁt будет ярким акцентом кухни, при этом в полной мере справляясь с возложенными на нее практическими функциями
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Дельта</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
                                 </div>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Дельта</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Жемчуг</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Жемчуг</div>
+                                            <div class="catalog__item-price ruble">7 790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="other-products other-products--accessories">
+            <div class="container">
+                <div class="articles__top">
+                    <div class="articles__left">
+                        <div class="section__title">Аксессуары</div>
+                    </div>
+                    <a href="#" class="articles__right">
+                        Вся продукция
+                    </a>
+                </div>
+                <div class="catalog__inner">
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Хомут</div>
+                                            <div class="catalog__item-price ruble">40</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic catalog__item-pic--1"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Хомут</div>
+                                            <div class="catalog__item-price ruble">40</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Решетка вентиляционная</div>
+                                            <div class="catalog__item-price ruble">790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic catalog__item-pic--2"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Решетка вентиляционная</div>
+                                            <div class="catalog__item-price ruble">790</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item-wrapper">
+                        <div class="catalog__item">
+                            <div class="catalog__item-inner">
+                                <div class="catalog__item-front">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Гибкий воздуховод</div>
+                                            <div class="catalog__item-price ruble">1 290</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-pic catalog__item-pic--3"></div>
+                                </div>
+                                <div class="catalog__item-back">
+                                    <div class="catalog__item-top">
+                                        <div class="catalog__item-top-text">
+                                            <div class="catalog__item-title">Гибкий воздуховод</div>
+                                            <div class="catalog__item-price ruble">1 290</div>
+                                        </div>
+                                        <div class="catalog__item-top-line animated-line"></div>
+                                    </div>
+                                    <div class="catalog__item-interior"></div>
+                                    <div class="catalog__item-info">
+                                        <div class="catalog__item-left">
+                                            <div class="catalog__item-text">Производительность</div>
+                                            <div class="catalog__item-text">Количество скоростей</div>
+                                            <div class="catalog__item-text">Ширина</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Купить</a>
+                                        </div>
+                                        <div class="catalog__item-middle">
+                                            <div class="catalog__item-text">1000 МЗ/Ч</div>
+                                            <div class="catalog__item-text">4, Agate, Таймер</div>
+                                            <div class="catalog__item-text">500 мм</div>
+                                            <a href="#" class="catalog__item-link catalog__item-buy">Подробнее</a>
+                                        </div>
+                                        <div class="catalog__item-right"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1029,7 +895,7 @@
                     </div>
                 </div>
                 <div class="login-tab__body" data-login="auth">
-                    <form class="login__auth">
+                    <form class="login__auth submit-activate">
                         <div class="form__row">
                             <input name="login__email" type="email" class="input" id="login__email" required>
                             <label for="login__email" class="label">Электронная почта*</label>
@@ -1046,7 +912,7 @@
                     </form>
                 </div>
                 <div class="login-tab__body" data-login="register" style="display: none;">
-                    <form class="register">
+                    <form class="register submit-activate">
                         <div class="form__row">
                             <input name="register__name" type="text" class="input" id="register__name" required>
                             <label for="register__name" class="label">Имя*</label>
@@ -1134,8 +1000,31 @@
             </div>
         </div>
     </div>
+
+    <div id="product" class="modal">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal-product__inner">
+                    <div class="modal-product__main">
+                        <div class="modal-product__main-photo" style="background-image: url(./img/product-7.png);" data-num="1"></div>
+                        <div class="modal-product__around modal-product__around--active">Потяните, чтобы посмотреть модель со всех сторон</div>
+                        <div class="modal-product__arrow arrow-prev"></div>
+                        <div class="modal-product__arrow arrow-next"></div>
+                    </div>
+                    <div class="modal-product__tabs">
+                        <div class="modal-product__tab modal-product__tab--1 modal-product__tab--active" data-url="./img/product-7.png" data-num="1" data-around="true"></div>
+                        <div class="modal-product__tab modal-product__tab--2" data-url="./img/product-2.png" data-num="2"></div>
+                        <div class="modal-product__tab modal-product__tab--1" data-url="./img/product-7.png" data-num="3" data-around="true"></div>
+                        <div class="modal-product__tab modal-product__tab--2" data-url="./img/product-2.png" data-num="4"></div>
+                        <div class="modal-product__tab modal-product__tab--1" data-url="./img/product-7.png" data-num="5"></div>
+                        <div class="modal-product__tab modal-product__tab--2" data-url="./img/product-2.png" data-num="6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End Modals -->
-    
+
     <script src="./js/plugins/jquery.min.js"></script>
     <script src="./js/plugins/selectize.min.js"></script>
     <script src="./js/plugins/slick.min.js"></script>

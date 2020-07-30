@@ -31,6 +31,11 @@ a:focus
 svg, svg path
     transition: all .5s ease-out
 
+input[type='submit'] 
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
 input[type="text"],
 input[type="password"],
 input[type="tel"],
@@ -42,9 +47,9 @@ textarea
     font-weight: 300
     font-size: 18px
     letter-spacing: 0.025em
-    font-family: 'RobotoCondensed', Arial, serif
+    font-family: 'RobotoCondensed', Arial, sans-serif
     &::placeholder
-        font-family: 'RobotoCondensed', Arial, serif
+        font-family: 'RobotoCondensed', Arial, sans-serif
         font-weight: 300
         font-size: 18px
         letter-spacing: 0.025em
@@ -66,7 +71,7 @@ textarea
     font-weight: 300
     font-size: 18px
     letter-spacing: 0.025em
-    font-family: 'RobotoCondensed', Arial, serif
+    font-family: 'RobotoCondensed', Arial, sans-serif
     top: 12px
     transition: all .2s ease-out
     left: 14px
@@ -88,10 +93,42 @@ label.error
     color: #b8061f
     font-size: 12px
     letter-spacing: 0.05em
-    font-family: 'RobotoCondensed', Arial, serif
+    font-family: 'RobotoCondensed', Arial, sans-serif
+
+.checkbox-toggler
+    height: 0
+    width: 0
+    visibility: hidden
+    margin: 0
+
+.checkbox-toggler__label 
+    cursor: pointer
+    text-indent: -9999px
+    width: 60px
+    height: 25px
+    background: #ffffff
+    border: 1px solid #d0d0d0
+    display: block
+    border-radius: 100px
+    position: relative
+
+.checkbox-toggler__label:after 
+    content: ''
+    position: absolute
+    top: 3px
+    left: 3px
+    width: 18px
+    height: 18px
+    background: $green
+    border-radius: 90px
+    transition: 0.3s
+
+.checkbox-toggler:checked + .checkbox-toggler__label:after 
+    left: calc(100% - 5px)
+    transform: translateX(-100%)
 
 .h1
-    font-family: 'Magistral-Book', Arial, serif
+    font-family: 'Magistral-Book', Arial, sans-serif
     font-size: 32px
     letter-spacing: 0.1em
     margin: 0
@@ -100,7 +137,7 @@ label.error
         font-size: 24px
 
 .h2
-    font-family: 'Magistral-Book', Arial, serif
+    font-family: 'Magistral-Book', Arial, sans-serif
     font-size: 24px
     letter-spacing: 0.07em
     margin: 0
@@ -114,6 +151,13 @@ label.error
         margin: 0
         margin-right: calc((100% - 1680px)/4)
         max-width: calc(1680px + ((100% - 1680px)/2))
+    &--left
+        margin: 0
+        margin-left: calc((100% - 1680px)/2)
+        max-width: calc(1680px + ((100% - 1680px)/2))
+        @media (max-width: 1749px)
+            margin-left: auto
+            max-width: 1680px
     @media (max-width: 1749px)
         padding: 0 3%
     @media (max-width: 767px)
@@ -129,7 +173,7 @@ label.error
         right: 0
 
 .section__title
-    font-family: 'Magistral-Book', Arial, serif
+    font-family: 'Magistral-Book', Arial, sans-serif
     font-size: 32px
     line-height: 54px
     letter-spacing: 0.07em
@@ -141,18 +185,26 @@ label.error
 
 .btn
     display: inline-block
-    font-family: 'Magistral-Book', Arial, serif
+    font-family: 'Magistral-Book', Arial, sans-serif
     font-size: 15px
     letter-spacing: 0.1em
     border: 1px solid #000000
     text-transform: uppercase
+    @media (max-width: 767px)
+        padding: 32px
+        border-radius: 0
     &--black
         background-color: #000000
         color: #ffffff
     &--disabled
         background-color: #e2e2e2
         border-color: #e2e2e2
-        color: #ffffff
+        color: #ffffff   
+        cursor: default
+        margin-bottom: 15px
+        &:hover,
+        &:focus
+            color: #ffffff 
 
 .line
     background-color: #000000
@@ -197,7 +249,7 @@ label.error
             height: 100%
     &-text
         font-size: 12px
-        font-family: 'EuropeC', Arial, serif
+        font-family: 'EuropeC', Arial, sans-serif
         letter-spacing: 0.13em
         text-transform: uppercase
     &-link:hover,
@@ -214,7 +266,7 @@ label.error
     justify-content: space-between
     align-items: center
     .tab
-        font-family: 'EuropeC', Arial, serif
+        font-family: 'EuropeC', Arial, sans-serif
         letter-spacing: 0.13em
         color: #9c9c9c
         padding-bottom: 12px

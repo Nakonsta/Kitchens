@@ -6,3 +6,30 @@
 
 .animated-line
     animation: animated-line 1s ease-out 1s 1 forwards
+
+@keyframes contactsDissapearing
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+
+.contactsDissapearing
+    animation: contactsDissapearing 1s ease-out 1s 1 forwards
+
+@keyframes menu-opened
+    0%
+        left: -3000px
+    100%
+        left: 0
+
+.dropdown-menu--active
+    animation: menu-opened 2s ease-out 0s 1 forwards
+
+@keyframes menu-closed
+    0%
+        left: 0
+    100%
+        left: -3000px
+
+.dropdown-menu--closed
+    animation: menu-closed 2s ease-out 0s 1 forwards
