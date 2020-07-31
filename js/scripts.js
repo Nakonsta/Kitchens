@@ -295,6 +295,28 @@ $(function(){
         }, 1500)
     });
 
+    // Скролл на детальной акции
+
+    $(window).scroll(function() {
+        var sc = $(this).scrollTop();
+        var scrBottom = 700 + parseInt(Math.round($('.sale-text__desc').innerHeight()/3));
+
+        if($('.sale-text').length) {
+            if(sc > 700) {
+                if(sc < scrBottom) {
+                    $('.sale-text__soc').css('bottom', `auto`)
+                    $('.sale-text__soc').css('top', `${sc - 700}px`)
+                } else {
+                    $('.sale-text__soc').css('top', `auto`)
+                    $('.sale-text__soc').css('bottom', `70px`)
+                }
+                } else {
+                    $('.sale-text__soc').css('top', `0px`)
+                    $('.sale-text__soc').css('bottom', `auto`)
+                }
+        }
+    })
+
     // Валидация форм
 
     $('.login__auth').validate({

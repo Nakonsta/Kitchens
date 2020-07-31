@@ -2521,10 +2521,15 @@
                 max-width: none
 
 .sale
+    padding-top: 100px
     &__inner
         display: flex
+        @media (max-width: 1023px)
+            flex-direction: column-reverse
     &__announce
         width: 44%
+        @media (max-width: 1023px)
+            width: 100%
     &__pic
         height: 100%
         background: url(../img/press-1.jpg) no-repeat 50% 50%
@@ -2541,8 +2546,13 @@
             background-color: rgba(0, 0, 0, 0.3)
         &-wrapper
             width: 56%
+            @media (max-width: 1023px)
+                width: 100%
+                margin-bottom: 32px
     .single-news__back
         padding: 75px 0 85px
+        @media (max-width: 1023px)
+            padding: 40px 0
     &__title
         font-size: 37px
         font-family: 'EuropeC', Arial, sans-serif
@@ -2550,22 +2560,148 @@
         text-transform: uppercase
         max-width: 470px
         padding-bottom: 32px
+        @media (max-width: 1023px)
+            font-size: 28px
+            max-width: none
     &__announce
         &-text
             max-width: 320px
             font-size: 19px
             font-weight: 30
             letter-spacing: 0.05em
+            @media (max-width: 1023px)
+                max-width: none
 
 .sale-text
-    padding: 105px 0 160px
+    padding: 105px 0 120px
+    @media (max-width: 1023px)
+        padding: 20px 0 80px
     &__inner
         display: flex
+        position: relative
+        @media (max-width: 1439px)
+            flex-direction: column
     &__desc
-        width: 65%
+        width: 64%
+        font-weight: 300
+        font-size: 19px
+        line-height: 33px
+        letter-spacing: 0.025em
+        @media (max-width: 1439px)
+            width: 100%
+            margin-bottom: 32px
+        @media (max-width: 1023px)
+            font-size: 17px
+            line-height: 1.6
+    &__p
+        margin-bottom: 40px
     &__soc
-        width: 35%
+        margin-left: 64%
+        width: 36%
+        padding-left: 210px
+        position: absolute
+        @media (max-width: 1439px)
+            width: 100%
+            padding-left: 0
+            margin-left: 0
+            position: static
+        .soc-link
+            padding-right: 0
+            margin-bottom: 44px
+            @media (max-width: 1439px)
+                margin-right: 50px
+                margin-bottom: 0
+        .soc-link-insta,
+        .soc-link-fb
+            margin-left: 4px
+        .soc-link-youtube
+            margin-left: 2px
     .single-news__share-soc
         display: flex
         flex-direction: column
+        @media (max-width: 1439px)
+            flex-direction: row
+
+.guarantee
+    padding-bottom: 140px
+    &__inner
+        display: flex
+        @media (max-width: 1439px)
+            flex-direction: column
+    &__text
+        padding-right: 200px
+        @media (max-width: 1439px)
+            padding-right: 0
+    &__form
+        min-width: 515px
+        flex-shrink: 0
+        @media (max-width: 767px)
+            min-width: 0
+        .question
+            padding-top: 0
+            width: 100%
+
+.typography
+    font-weight: 300
+    font-size: 19px
+    line-height: 33px
+    letter-spacing: 0.025em
+    @media (max-width: 767px)
+        font-size: 16px
+        line-height: 1.5
+    p
+        margin-top: 15px
+        margin-bottom: 20px
+        font-weight: 300
+        font-size: 19px
+        line-height: 33px
+        letter-spacing: 0.025em
+        @media (max-width: 767px)
+            font-size: 16px
+            line-height: 1.5
+            margin: 8px 0 15px
+    ul, ol
+        padding: 0 0 0 18px
+    li
+        font-weight: 300
+        font-size: 19px
+        line-height: 33px
+        letter-spacing: 0.025em
+        margin-bottom: 30px
+        @media (max-width: 767px)
+            font-size: 16px
+            line-height: 1.5
+            margin-bottom: 15px
+    a
+        text-decoration: underline
+    &__title
+        text-transform: uppercase
+        font-size: 22px
+        font-family: 'EuropeC', Arial, sans-serif
+        letter-spacing: 0.07em
+        @media (max-width: 767px)
+            font-size: 18px
+            line-height: 1.5
+    .typography__list
+        list-style: none
+        counter-reset: item
+        padding: 0
+        li::before
+            content: counter(item) ') '
+            counter-increment: item
+
+.delivery
+    padding-bottom: 230px
+    &__inner
+        display: flex
+        @media (max-width: 1439px)
+            flex-direction: column
+    &__text
+        width: 45%
+    &__form
+        width: 55%
+        padding-left: 120px
+        .question
+            padding-top: 0
+            min-width: 515px
 
