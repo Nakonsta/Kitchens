@@ -2691,17 +2691,911 @@
             counter-increment: item
 
 .delivery
-    padding-bottom: 230px
+    padding-bottom: 135px
+    @media (max-width: 1023px)
+        padding-bottom: 45px
+    @media (max-width: 767px)
+        padding-bottom: 20px
     &__inner
         display: flex
-        @media (max-width: 1439px)
+        @media (max-width: 1023px)
             flex-direction: column
     &__text
         width: 45%
+        @media (max-width: 1023px)
+            width: 100%
     &__form
         width: 55%
         padding-left: 120px
+        @media (max-width: 1023px)
+            width: 100%
+            padding-left: 0
         .question
             padding-top: 0
             min-width: 515px
+            @media (max-width: 767px)
+                min-width: 0
+    &__value
+        min-width: 120px
+    &__info
+        padding-bottom: 65px
+        @media (max-width: 767px)
+            padding-bottom: 20px
+    &__row
+        display: flex
+        justify-content: space-between
+        text-transform: uppercase
+        border-bottom: 1px solid #ebebeb
+        padding: 35px 195px 12px 0
+        font-size: 11px
+        font-family: 'EuropeC', Arial, sans-serif
+        letter-spacing: 0.13em
+        @media (max-width: 1199px)
+            padding-right: 0
+        &:first-child
+            padding-top: 0
+    &__about
+        font-weight: 300
+        font-size: 17px
+        letter-spacing: 0.025em
+        @media (max-width: 1023px)
+            margin-bottom: 45px
+
+.cart
+    max-width: 1260px
+    margin: 0 auto
+    padding: 20px 0 200px
+    @media (max-width: 767px)
+        padding-bottom: 0
+    .container
+        @media (max-width: 767px)
+            padding: 0
+    &__inner
+        position: relative
+    &__form
+        display: flex
+        align-items: flex-start
+        position: relative
+        .input
+            background-color: #f5f5f5
+            @media (max-width: 767px)
+                background-color: #fff
+        &-block
+            background-color: #f5f5f5
+            @media (max-width: 767px)
+                background-color: #fff
+            .cart__total-btn
+                display: none
+                @media (max-width: 1023px)
+                    display: block
+                .btn
+                    margin-bottom: 0
+        &-subtitle
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 32px
+            letter-spacing: 0.07em
+            padding: 0 50px 16px
+            @media (max-width: 1023px)
+                font-size: 14px
+                padding: 0 5% 12px
+        &-title-block
+            display: flex
+            justify-content: space-between
+            align-items: center
+            padding-right: 45px
+            @media (max-width: 767px)
+                padding-right: 0
+        &-title-auth
+            padding-bottom: 16px
+            font-size: 11px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.13em
+            @media (max-width: 767px)
+                font-size: 8px
+        &-person
+            padding: 50px 220px 80px 0
+            border-bottom: 1px solid #dcdcdc
+            @media (max-width: 1199px)
+                padding-right: 50px
+            @media (max-width: 767px)
+                padding-right: 5%
+                padding-bottom: 50px
+                border-bottom: none
+            &-info
+                padding-left: 50px
+                @media (max-width: 767px)
+                    padding-left: 5%
+        &-delivery
+            padding: 65px 0 72px
+            @media (max-width: 767px)
+                padding-top: 0
+                border-bottom: none
+            &-types
+                padding: 0 135px 0 50px
+                display: flex
+                justify-content: flex-start
+                align-items: flex-start
+                flex-wrap: wrap
+                @media (max-width: 1199px)
+                    padding-right: 50px
+            &-block
+                width: 50%
+                padding-right: 55px
+                &:nth-child(2n + 2)
+                    padding-right: 0
+                @media (max-width: 767px)
+                    width: 100%
+                    padding-right: 0
+            &-info
+                position: relative
+                top: 4px
+                left: 8px
+                &:hover .cart__form-delivery-hint,
+                &:focus .cart__form-delivery-hint
+                    display: block
+            &-hint
+                display: none
+                position: absolute
+                top: -180px
+                right: -390px
+                width: 335px
+                padding: 32px 40px
+                background-color: #fafafa
+                z-index: 3
+                @media (max-width: 1023px)
+                    right: -125px
+                    width: 320px
+                &-close
+                    display: inline-block
+                    position: absolute
+                    top: 35px
+                    right: 15px
+                    width: 11px
+                    height: 11px
+                    background: url(../img/delete.png) no-repeat 50% 50%
+                    z-index: 5
+            &-i
+                display: inline-block
+                background: url(../img/hint.png) no-repeat 50% 50%
+                width: 18px
+                height: 19px
+            &-type
+                width: 100%
+                display: inline-block
+                font-weight: 300
+                letter-spacing: 0.025em
+                font-size: 18px
+                padding-bottom: 8px
+                @media (max-width: 575px)
+                    font-size: 11px
+                    padding-bottom: 0
+            &-price
+                font-weight: 300
+                letter-spacing: 0.025em
+                font-size: 14px
+                margin-bottom: 28px
+                display: inline-block
+                @media (max-width: 575px)
+                    font-size: 9px
+                    margin-bottom: 16px
+            .cart__form-delivery-firms
+                width: 50%
+                padding-left: 40px
+                @media (max-width: 767px)
+                    width: 100%
+                .selectize-input
+                    background-color: transparent
+                    .item
+                        text-transform: none
+                        font-family: 'RobotoCondensed', Arial, Helvetica, sans-serif
+                        font-size: 18px
+                        font-weight: 300
+                        letter-spacing: 0.025em
+            &-firms-price
+                font-size: 14px
+                font-weight: 300
+                letter-spacing: 0.025em
+        &-address
+            padding: 65px 220px 72px 0
+            border-bottom: 1px solid #dcdcdc
+            @media (max-width: 1199px)
+                padding-right: 50px
+            @media (max-width: 767px)
+                padding-right: 5%
+                padding-bottom: 0
+                padding-top: 0
+            &-inputs
+                padding-left: 50px
+                @media (max-width: 767px)
+                    padding-left: 5%
+            .input
+                font-weight: 400
+            &-group
+                display: flex
+                justify-content: space-between
+                @media (max-width: 767px)
+                    flex-wrap: wrap
+                .form__row
+                    margin-right: 20px
+                    @media (max-width: 767px)
+                        width: calc((100% - 12px)/2)
+                        margin-right: 12px
+                    &:last-child
+                        margin-right: 0
+                        @media (max-width: 767px)
+                            margin-right: 12px
+                    &:nth-child(2n + 2)
+                        @media (max-width: 767px)
+                            margin-right: 0
+            .textarea
+                background-color: transparent
+    &__detailed,
+    &__order
+        width: 69%
+        padding-right: 16px
+        @media (max-width: 1023px)
+            width: 100%
+            padding-right: 0
+    &__total
+        width: 31%
+        position: absolute
+        right: 0
+        top: 0
+        @media (max-width: 1023px)
+            position: static
+    &__goods
+        padding: 50px 0 70px
+        background-color: #f5f5f5
+        margin-bottom: 18px
+        @media (max-width: 1023px)
+            padding-bottom: 0
+        @media (max-width: 767px)
+            background-color: #fff
+            margin-bottom: 0
+        .cart__total-btn
+            display: none
+            @media (max-width: 1023px)
+                display: block
+            .btn
+                @media (max-width: 767px)
+                    margin-bottom: 0
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        padding: 32px 30px 32px 50px
+        border-top: 1px solid #dcdcdc
+        @media (max-width: 767px)
+            position: relative
+        &-pic
+            background-repeat: no-repeat
+            background-position: 50% 50%
+            background-size: contain
+            width: 81px
+            height: 65px
+            flex-shrink: 0
+            &--1
+                background-image: url(../img/cart-1.jpg)
+            &--2
+                background-image: url(../img/cart-2.jpg)
+        &-info
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            flex: 1
+            padding-left: 70px
+            @media (max-width: 1439px)
+                padding-left: 16px
+            @media (max-width: 575px)
+                flex-direction: column
+                width: calc(100% - 90px)
+        &-text
+            @media (max-width: 575px)
+                order: 0
+        &-title
+            font-family: 'MagistralC', Arial, sans-serif
+            font-size: 14px
+            letter-spacing: 0.07em
+            text-transform: uppercase
+            padding-bottom: 40px
+            @media (max-width: 767px)
+                padding-bottom: 30px
+        &-features
+            text-transform: uppercase
+            font-size: 10px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.13em
+            @media (max-width: 575px)
+                font-size: 8px
+                padding-bottom: 16px
+        &-feature
+            margin-right: 24px
+            @media (max-width: 1439px)
+                display: block
+                margin-right: 0
+            @media (max-width: 575px)
+                padding-bottom: 10px
+            &:last-child
+                margin-right: 0
+        &-quantity
+            @media (max-width: 575px)
+                order: 2
+            .quantity-arrow-minus
+                @media (max-width: 575px)
+                    padding-left: 0
+        &-price
+            @media (max-width: 575px)
+                order: 1
+                padding-bottom: 30px
+            &-new
+                text-transform: uppercase
+                font-size: 18px
+                font-family: 'EuropeC', Arial, sans-serif
+                letter-spacing: 0.07em
+                line-height: 1.2
+                @media (max-width: 575px)
+                    font-size: 14px
+            &-old
+                text-align: right
+                color: $green
+                font-size: 12px
+                font-family: 'EuropeC', Arial, sans-serif
+                letter-spacing: 0.07em
+                line-height: 1.2
+                @media (max-width: 575px)
+                    text-align: left
+                    font-size: 8px
+        &-delete
+            width: 17px
+            height: 17px
+            background: url(../img/delete.png) no-repeat 50% 50%
+            @media (max-width: 767px)
+                position: absolute
+                top: 16px
+                left: 5%
+    &__total
+        padding: 35px 0 0
+        background-color: #f5f5f5
+        @media (max-width: 1023px)
+            display: none
+        &--order
+            @media (max-width: 1023px)
+                display: block
+                width: 100%
+        &-title
+            padding: 0 22px
+            display: flex
+            justify-content: space-between
+            &-text
+                font-weight: 300
+                letter-spacing: 0.05em
+                font-size: 12px
+                width: 70px
+        &-line
+            display: inline-block
+            background-color: #dcdcdc
+            animation-delay: 2s
+            &-wrapper
+                width: calc(100% - 85px)
+                display: inline-block
+        &-item
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding: 25px 22px
+            border-bottom: 1px solid #dcdcdc
+            text-transform: uppercase
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 14px
+            letter-spacing: 0.07em
+            @media (max-width: 767px)
+                font-size: 10px
+            &:last-child
+                border-bottom: none
+            &-title
+                max-width: 225px
+                @media (max-width: 1439px)
+                    max-width: 150px
+        &-delivery
+            background-color: #fcfcfc
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding: 28px 22px
+            text-transform: uppercase
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 14px
+            letter-spacing: 0.07em
+            @media (max-width: 767px)
+                font-size: 10px
+            &-type
+                @media (max-width: 1439px)
+                    max-width: 150px
+            &-text
+                max-width: 225px
+        &-sum
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+            padding: 28px 22px
+            &-discount
+                font-family: 'Magistral-Book', Arial, sans-serif
+                font-size: 14px
+                letter-spacing: 0.07em
+                color: $green
+            &-common
+                font-family: 'MagistralC', Arial, sans-serif
+                font-size: 18px
+                letter-spacing: 0.07em
+                text-transform: uppercase
+        &-summary
+            font-family: 'MagistralC', Arial, sans-serif
+            font-size: 18px
+            letter-spacing: 0.07em
+            text-transform: uppercase
+        &-promo
+            background-color: #fff
+            padding: 24px 0
+            font-weight: 300
+            letter-spacing: 0.05em
+            font-size: 12px
+        &-btn
+            width: 100%
+            background-color: #fff
+            .btn
+                width: 100%
+                padding: 24px 0
+                text-align: center
+        &-rules
+            background-color: #fff
+            padding: 24px 32px 0
+            font-weight: 300
+            letter-spacing: 0.05em
+            font-size: 11px
+            line-height: 19px
+            color: #c3c3c3
+            &-link
+                color: #7b7b7b
+    &__order
+        &-wrapper
+            display: flex
+            align-items: flex-start
+            position: relative
+            @media (max-width: 1023px)
+                flex-direction: column
+            @media (max-width: 767px)
+                padding: 0 5%
+        &-block
+            background-color: #f5f5f5
+            padding: 52px 52px 35px
+            margin-bottom: 16px
+            @media (max-width: 1023px)
+                background-color: #fff
+                padding-left: 0
+                padding-right: 0
+            @media (max-width: 767px)
+                padding-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+            &-payment
+                &--desktop
+                    @media (max-width: 1023px)
+                        display: none
+                &--mobile
+                    display: none
+                    @media (max-width: 1023px)
+                        display: block
+                        margin-bottom: 0
+                        padding-bottom: 0
+        &-title
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 32px
+            letter-spacing: 0.07em
+            line-height: 54px
+            padding-bottom: 40px
+            max-width: 640px
+            @media (max-width: 767px)
+                font-size: 14px
+                padding-bottom: 30px
+                line-height: 27px
+        &-return
+            padding-bottom: 70px
+            display: inline-block
+            font-size: 11px
+            @media (max-width: 767px)
+                font-size: 8px
+                padding-bottom: 30px
+                padding-right: 50px
+            &::before,
+            &::after
+                @media (max-width: 767px)
+                    content: ''
+            &::before
+                @media (max-width: 767px)
+                    top: 0
+            &::after
+                @media (max-width: 767px)
+                    top: 7px
+        &-number
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 32px
+            letter-spacing: 0.07em
+            line-height: 54px
+            padding-bottom: 20px
+            @media (max-width: 767px)
+                font-size: 14px
+                padding-bottom: 10px
+        &-num
+            font-weight: 700
+        &-text
+            font-weight: 300
+            letter-spacing: 0.025em
+            font-size: 18px
+            line-height: 32px
+            padding-bottom: 60px
+            @media (max-width: 767px)
+                font-size: 12px
+                line-height: 24px
+                padding-bottom: 24px
+        &-info
+            display: flex
+            flex-wrap: wrap
+            &-block
+                width: 50%
+                padding-right: 10px
+                font-weight: 300
+                letter-spacing: 0.025em
+                font-size: 18px
+                padding-bottom: 30px
+                @media (max-width: 767px)
+                    width: 100%
+                    padding-right: 0
+                    font-size: 12px
+                    padding-bottom: 16px
+                &--wide
+                    width: 100%
+                    padding-right: 0
+                &-title
+                    font-size: 14px
+                    padding-bottom: 8px
+                    @media (max-width: 767px)
+                        font-size: 8px
+    &__promocode
+        margin-bottom: 16px
+        background-color: #f5f5f5
+        padding: 40px 210px
+        @media (max-width: 1199px)
+            padding: 40px 5%
+        &-form
+            display: flex
+        &-text
+            font-size: 12px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.05em
+            padding-bottom: 16px
+        .form__row
+            margin-bottom: 0
+            margin-right: 16px
+            max-width: 135px
+        .input
+            font-weight: 300
+            letter-spacing: 0.05em
+            font-size: 18px
+            text-transform: uppercase
+        .btn
+            background-color: transparent
+            font-size: 10px
+            padding-left: 24px
+            padding-right: 24px
+            line-height: 49px
+            &:hover,
+            &:focus
+                background-color: #000000
+            @media (max-width: 767px)
+                padding-top: 0
+                padding-bottom: 0
+
+.ui-accordion .ui-accordion-header
+    display: block
+    cursor: pointer
+    position: relative
+    padding: 50px 60px 30px 32px
+    text-transform: uppercase
+    font-size: 18px
+    font-family: 'EuropeC', Arial, sans-serif
+    letter-spacing: 0.07em
+    outline: none
+    margin-bottom: 2px
+    @media (max-width: 1023px)
+        font-size: 14px
+
+.ui-accordion .ui-accordion-header-active
+    margin-bottom: 0
+    .faq__question-plus
+        background: url(../img/accordion-minus.png) no-repeat 50% 50%
+
+.ui-accordion .ui-accordion-content
+    padding: 0 32px 40px
+    border-top: 0
+    overflow: auto
+    font-size: 17px
+    font-weight: 300
+    letter-spacing: 0.025em
+    @media (max-width: 1023px)
+        font-size: 14px
+
+.faq
+    padding-bottom: 150px
+    @media (max-width: 1199px)
+        padding-bottom: 80px
+    @media (max-width: 1023px)
+        padding-bottom: 45px
+    &__inner
+        display: flex
+        @media (max-width: 1023px)
+            flex-direction: column
+    &__text
+        width: 70%
+        padding-right: 60px
+        @media (max-width: 1023px)
+            width: 100%
+            padding-right: 0
+    &__form
+        width: 30%
+        @media (max-width: 1023px)
+            width: 100%
+        .question
+            padding-top: 40px
+            width: 100%
+            @media (max-width: 767px)
+                min-width: 0
+    &__question
+        background-color: #f6f6f6
+        position: relative
+        &-plus
+            position: absolute
+            display: inline-block
+            width: 29px
+            height: 29px
+            background: url(../img/accordion.png) no-repeat 50% 50%
+            top: 40px
+            right: 30px
+    &__answer
+        background-color: #f6f6f6
+        margin-bottom: 16px
+
+.about
+    &__text
+        padding-bottom: 110px
+        @media (max-width: 1199px)
+            padding-bottom: 80px
+        @media (max-width: 767px)
+            padding-bottom: 45px
+        &-desc
+            text-transform: uppercase
+            font-size: 37px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.07em
+            line-height: 76px
+            @media (max-width: 1439px)
+                font-size: 28px
+                line-height: 1.5
+            @media (max-width: 767px)
+                font-size: 18px
+    &__slider
+        padding-bottom: 60px
+        &-slide
+            padding-left: 20%
+            padding-bottom: 140px
+            outline: none
+            color: #a3a3a3
+            transition: color .5s ease-out
+            @media (max-width: 1199px)
+                padding-left: 10%
+            @media (max-width: 767px)
+                padding-left: 0
+            &.slick-current
+                color: #000000
+            &.slick-active + .slick-active + .slick-active
+                color: #dddddd
+        &-num
+            font-family: 'Magistral-Book', Arial, sans-serif
+            font-size: 80px
+            letter-spacing: 0.1em
+            line-height: 1.1
+            position: relative
+            padding-left: 230px
+            @media (max-width: 1439px)
+                font-size: 48px
+            @media (max-width: 767px)
+                padding-left: 70px
+            @media (max-width: 575px)
+                font-size: 24px
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 0
+                width: 170px
+                height: 1px
+                background-color: #000000
+                @media (max-width: 767px)
+                    width: 50px
+            &::after
+                content: ''
+                position: absolute
+                top: 100px
+                left: 145px
+                width: 25px
+                height: 1px
+                background-color: #000000
+                @media (max-width: 1439px)
+                    top: 70px
+                @media (max-width: 767px)
+                    left: 25px
+                @media (max-width: 575px)
+                    top: 50px
+        &-text
+            font-size: 12px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.13em
+            padding-left: 230px
+            text-transform: uppercase
+            position: relative
+            @media (max-width: 767px)
+                padding-left: 70px
+            @media (max-width: 575px)
+                font-size: 8px
+            &::before,
+            &::after
+                content: ''
+                position: absolute
+                left: 145px
+                width: 25px
+                height: 1px
+                background-color: #000000
+                @media (max-width: 767px)
+                    left: 25px
+            &::before
+                top: 70px
+            &::after
+                top: 130px
+        &-slide:last-child
+            padding-bottom: 0
+            .about__slider-num::after,
+            .about__slider-text::before,
+            .about__slider-text::after
+                content: none
+    &__history
+        padding-bottom: 145px
+        @media (max-width: 1199px)
+            padding-bottom: 80px
+        @media (max-width: 767px)
+            padding-bottom: 45px
+        &-pic
+            height: 782px
+            background: url(../img/history.jpg) no-repeat 50% 50%
+            background-size: cover
+            margin-bottom: 150px
+            @media (max-width: 767px)
+                height: 400px
+                margin-bottom: 45px
+        &-text
+            &-desc
+                font-weight: 300
+                letter-spacing: 0.025em
+                font-size: 17px
+                line-height: 30px
+                max-width: 880px
+                padding-left: 150px
+                @media (max-width: 1199px)
+                    padding-left: 0
+                    max-width: none
+    &__block
+        display: flex
+        @media (max-width: 1199px)
+            flex-direction: column
+    &__subtitle
+        text-align: right
+        width: 17%
+        flex-shrink: 0
+        font-family: 'Magistral-Book', Arial, sans-serif
+        font-size: 24px
+        letter-spacing: 0.07em
+        @media (max-width: 1199px)
+            width: 100%
+            text-align: left
+            margin-bottom: 20px
+    &__priority
+        background-color: #f6f6f6
+        padding: 140px 0
+        @media (max-width: 1199px)
+            padding: 80px 0
+        &-text
+            padding-left: 75px
+            @media (max-width: 1199px)
+                padding-left: 0
+        .faq__question
+            padding-top: 10px
+            padding-left: 75px
+            max-width: 1000px
+        .faq__answer
+            padding-left: 75px
+            max-width: 1000px
+        .faq__question-more
+            display: block
+            font-weight: 300
+            letter-spacing: 0.025em
+            font-size: 17px
+            text-transform: lowercase
+            padding-top: 16px
+        .faq__question-plus
+            top: 10px
+            right: auto
+            left: 0
+    &__advantages
+        padding: 80px 0 0
+        .container
+            position: relative
+            min-height: 580px
+            top: -400px
+            @media (max-width: 767px)
+                top: 0
+        &-string
+            font-size: 200px
+            font-family: 'EuropeC', Arial, sans-serif
+            letter-spacing: 0.18em
+            color: #e5e5e5
+            @media (max-width: 767px)
+                display: none
+        &-inner
+            position: absolute
+            top: 210px
+            @media (max-width: 767px)
+                position: static
+        &-text
+            padding-left: 90px
+            padding-right: 5%
+            @media (max-width: 1199px)
+                padding-left: 0
+        &-announce
+            max-width: 910px
+            font-weight: 300
+            letter-spacing: 0.025em
+            font-size: 23px
+            padding-bottom: 135px
+            padding-left: 60px
+            @media (max-width: 1439px)
+                font-size: 17px
+                padding-bottom: 80px
+        &-list
+            list-style: none
+            padding: 0
+            margin: 0
+            max-width: 1000px
+        &-item
+            position: relative
+            padding-left: 60px
+            font-weight: 300
+            letter-spacing: 0.025em
+            font-size: 17px
+            padding-bottom: 35px
+            &::before
+                content: ''
+                position: absolute
+                top: 15px
+                left: 0
+                width: 35px
+                height: 1px
+                background-color: #000000
+    &__persons
+        &-pic
+            height: 1122px
+            background: url(../img/team.jpg) no-repeat 50% 50%
+            background-size: cover
+            @media (max-width: 767px)
+                height: 400px
+
+
+
 

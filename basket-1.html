@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elikor — пресса</title>
+    <title>Elikor — корзина-1</title>
 
     <link rel="stylesheet" href="./css/plugins/selectize.css">
     <link rel="stylesheet" href="./css/plugins/slick.css">
@@ -107,87 +107,273 @@
         </div>
     </header>
     <main class="main">
-        <section class="page-title">
+        <section class="cart">
             <div class="container">
-                <h1 class="h1">Кухонные вытяжки ELIKOR в прессе и ТВ-проектах</h1>
-            </div>
-        </section>
-        <section class="press articles__block">
-            <div class="container">
-                <div class="press__inner">
-                    <div class="press__article">
-                        <div class="press__pic-wrapper">
-                            <div class="press__pic press__pic--1">
-                                <a href="#" class="press__pic-link"></a>
+                <div class="cart__inner">
+                    <form class="cart__form">
+                        <div class="cart__detailed">
+                            <div class="cart__goods">
+                                <div class="cart__form-subtitle">Оформление заказа</div>
+                                <div class="cart__goods-block">
+                                    <div class="cart__item">
+                                        <div class="cart__item-pic cart__item-pic--1"></div>
+                                        <div class="cart__item-info">
+                                            <div class="cart__item-text">
+                                                <div class="cart__item-title">
+                                                    Оптима
+                                                </div>
+                                                <div class="cart__item-features">
+                                                    <span class="cart__item-feature">Серебристый</span>
+                                                    <span class="cart__item-feature">Ширина 500 мм</span>
+                                                    <span class="cart__item-feature">400 м<sup>3</sup>ч</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-quantity">
+                                                <div class="quantity-block">
+                                                    <span class="quantity-arrow-minus"> - </span>
+                                                    <input class="quantity-num" type="number" value="1" />
+                                                    <span class="quantity-arrow-plus"> + </span>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-price">
+                                                <div class="cart__item-price-new">6290 P</div>
+                                                <div class="cart__item-price-old"><s>5790 P</s></div>
+                                            </div>
+                                            <a href="#" class="cart__item-delete"></a>
+                                        </div>
+                                    </div>
+                                    <div class="cart__item">
+                                        <div class="cart__item-pic cart__item-pic--2"></div>
+                                        <div class="cart__item-info">
+                                            <div class="cart__item-text">
+                                                <div class="cart__item-title">
+                                                    Оптима
+                                                </div>
+                                                <div class="cart__item-features">
+                                                    <span class="cart__item-feature">Серебристый</span>
+                                                    <span class="cart__item-feature">Ширина 500 мм</span>
+                                                    <span class="cart__item-feature">400 м<sup>3</sup>ч</span>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-quantity">
+                                                <div class="quantity-block">
+                                                    <span class="quantity-arrow-minus"> - </span>
+                                                    <input class="quantity-num" type="number" value="1" />
+                                                    <span class="quantity-arrow-plus"> + </span>
+                                                </div>
+                                            </div>
+                                            <div class="cart__item-price">
+                                                <div class="cart__item-price-new">6290 P</div>
+                                                <div class="cart__item-price-old"><s>5790 P</s></div>
+                                            </div>
+                                            <a href="#" class="cart__item-delete"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__total-btn">
+                                    <a href="#" class="btn btn--disabled">Оформить заказ</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="press__info">
-                            <div class="press__text">
-                                <a href="#" class="press__title">Участие в ТВ проекте “Сделано со вкусом”</a>
-                                <a href="#" class="press__announce">
-                                    Новая вытяжка компании сочетает самые эффективные технические 
-                                    решения бренда и новый дизайн без острых углов
-                                </a>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
+                            <div class="cart__promocode">
+                                <div class="cart__promocode-text">У меня есть промокод</div>
+                                <div class="cart__promocode-form">
+                                    <div class="form__row">
+                                        <input type="text" id="promocode" name="promocode" class="input">
+                                        <label for="promocode" class="label"></label>
+                                    </div>
+                                    <a href="#" class="btn">Применить</a>
+                                </div>
+                            </div>
+                            <div class="cart__form-block">
+                                <div class="cart__form-person">
+                                    <div class="cart__form-title-block">
+                                        <div class="cart__form-subtitle">
+                                            Получатель
+                                        </div>
+                                        <div class="cart__form-title-auth">
+                                            <a href="#auth" class="cart__form-title-link">Вход / Регистрация</a>
+                                        </div>
+                                    </div>
+                                    <div class="cart__form-person-info">
+                                        <div class="form__row">
+                                            <input type="text" id="cart-form__name" name="cart-form__name" class="input" required>
+                                            <label for="cart-form__name" class="label">Имя*</label>
+                                        </div>
+                                        <div class="form__row">
+                                            <input type="text" id="cart-form__surname" name="cart-form__surname" class="input" required>
+                                            <label for="cart-form__surname" class="label">Фамилия*</label>
+                                        </div>
+                                        <div class="form__row">
+                                            <input type="tel" id="cart-form__phone" name="cart-form__phone" class="input" required>
+                                            <label for="cart-form__phone" class="label">Телефон*</label>
+                                        </div>
+                                        <div class="form__row">
+                                            <input type="email" id="cart-form__email" name="cart-form__email" class="input" required>
+                                            <label for="cart-form__email" class="label">Электронная почта*</label>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="cart__form-address">
+                                    <div class="cart__form-subtitle">Адрес доставки</div>
+                                    <div class="cart__form-address-inputs">
+                                        <div class="form__row">
+                                            <input type="text" id="cart-form__address" name="cart-form__address" class="input" required>
+                                            <label for="cart-form__address" class="label">Адрес</label>
+                                        </div>
+                                        <div class="cart__form-address-group">
+                                            <div class="form__row">
+                                                <input type="text" id="cart-form__flat" name="cart-form__flat" class="input" required>
+                                                <label for="cart-form__flat" class="label">Кв / Офис</label>
+                                            </div>
+                                            <div class="form__row">
+                                                <input type="text" id="cart-form__entry" name="cart-form__entry" class="input" required>
+                                                <label for="cart-form__entry" class="label">Подъезд</label>
+                                            </div>
+                                            <div class="form__row">
+                                                <input type="text" id="cart-form__floor" name="cart-form__floor" class="input" required>
+                                                <label for="cart-form__floor" class="label">Этаж</label>
+                                            </div>
+                                            <div class="form__row">
+                                                <input type="text" id="cart-form__code" name="cart-form__code" class="input" required>
+                                                <label for="cart-form__code" class="label">Домофон</label>
+                                            </div>
+                                        </div>
+                                        <div class="textarea__wrapper">
+                                            <textarea name="cart-form__textarea" id="cart-form__textarea" rows="4" class="textarea" placeholder="Комментарий"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__form-delivery">
+                                    <div class="cart__form-subtitle">Способ доставки</div>
+                                    <div class="cart__form-delivery-types">
+                                        <div class="cart__form-delivery-block">
+                                            <input type="radio" id="cart__form-delivery-1" name="cart__form-delivery" required>
+                                            <label for="cart__form-delivery-1" class="label-delivery">
+                                                <span class="cart__form-delivery-type">Самовывоз из магазина "Коралл"</span>
+                                                <span class="cart__form-delivery-price">Бесплатно</span>
+                                            </label>
+                                        </div>
+                                        <div class="cart__form-delivery-block">
+                                            <input type="radio" id="cart__form-delivery-2" name="cart__form-delivery" required>
+                                            <label for="cart__form-delivery-2" class="label-delivery">
+                                                <span class="cart__form-delivery-type">Доставка "Почтой России"</span>
+                                                <span class="cart__form-delivery-price">300 р. / до 14 дней</span>
+                                                <span class="cart__form-delivery-info">
+                                                    <span class="cart__form-delivery-i"></span>
+                                                    <span class="cart__form-delivery-hint">
+                                                        Мы принимаем онлайн платежи от банка "Сбербанк", при оплате с других банков
+                                                        с вас будет взыматься комиссия
+                                                        <span class="cart__form-delivery-hint-close"></span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="cart__form-delivery-block">
+                                            <input type="radio" id="cart__form-delivery-3" name="cart__form-delivery" required>
+                                            <label for="cart__form-delivery-3" class="label-delivery">
+                                                <span class="cart__form-delivery-type">Доставка курьером</span>
+                                                <span class="cart__form-delivery-price">300 р. / до 2 дней</span>
+                                                <span class="cart__form-delivery-info">
+                                                    <span class="cart__form-delivery-i"></span>
+                                                    <span class="cart__form-delivery-hint">
+                                                        Мы принимаем онлайн платежи от банка "Сбербанк", при оплате с других банков
+                                                        с вас будет взыматься комиссия
+                                                        <span class="cart__form-delivery-hint-close"></span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="cart__form-delivery-block">
+                                            <input type="radio" id="cart__form-delivery-4" name="cart__form-delivery" required>
+                                            <label for="cart__form-delivery-4" class="label-delivery">
+                                                <span class="cart__form-delivery-type">Доставка транспортной компанией</span>
+                                                <span class="cart__form-delivery-price">1300 р. / до 17 дней</span>
+                                                <span class="cart__form-delivery-info">
+                                                    <span class="cart__form-delivery-i"></span>
+                                                    <span class="cart__form-delivery-hint">
+                                                        Мы принимаем онлайн платежи от банка "Сбербанк", при оплате с других банков
+                                                        с вас будет взыматься комиссия
+                                                        <span class="cart__form-delivery-hint-close"></span>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="cart__form-delivery-firms">
+                                            <select class="cart__item-delivery-companies select-js">
+                                                <option value="Интермост логистика">Интермост логистика</option>
+                                                <option value="СДЕК">СДЕК</option>
+                                                <option value="Ozon">Ozon</option>
+                                            </select>
+                                            <div class="cart__form-delivery-firms-price">
+                                                3745 р. / 2 дня
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cart__total-btn">
+                                    <a href="#" class="btn btn--disabled">Оформить заказ</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="press__article">
-                        <div class="press__pic-wrapper">
-                            <div class="press__pic press__pic--2">
-                                <a href="#" class="press__pic-link"></a>
-                            </div>
-                        </div>
-                        <div class="press__info">
-                            <div class="press__text">
-                                <a href="#" class="press__title">Участие в ТВ проекте “Фазенда”</a>
-                                <a href="#" class="press__announce">
-                                    Новая вытяжка компании сочетает самые эффективные технические 
-                                    решения бренда и новый дизайн без острых углов
-                                </a>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
+                        <div class="cart__total">
+                            <div class="cart__total-title">
+                                <span class="cart__total-title-text">Ваш заказ</span>
+                                <div class="cart__total-line-wrapper">
+                                    <span class="cart__total-line line animated-line"></span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="press__article">
-                        <div class="press__pic-wrapper">
-                            <div class="press__pic press__pic--3">
-                                <a href="#" class="press__pic-link"></a>
-                            </div>
-                        </div>
-                        <div class="press__info">
-                            <div class="press__text">
-                                <a href="#" class="press__title">Обзор кухонной вытяжки ELIKOR Кварц</a>
-                                <a href="#" class="press__announce">
-                                    Новая вытяжка компании сочетает самые эффективные технические 
-                                    решения бренда и новый дизайн без острых углов
-                                </a>
-                                <div class="articles__item-read">
-                                    <a href="#" class="articles__item-read-text">Узнать больше</a>
-                                    <span class="articles__item-read-line">
-                                        <span class="articles__item-read-animate"></span>
-                                    </span>
+                            <div class="cart__total-goods">
+                                <div class="cart__total-item">
+                                    <div class="cart__total-item-title">Оптима</div>
+                                    <div class="cart__total-item-price">6290 Р</div>
+                                </div>
+                                <div class="cart__total-item">
+                                    <div class="cart__total-item-title">Фильтр алюминиевый рамочный</div>
+                                    <div class="cart__total-item-price">750 Р</div>
                                 </div>
                             </div>
+                            <div class="cart__total-delivery">
+                                <div class="cart__total-delivery-type">
+                                    <span class="cart__total-delivery-text">
+                                        Доставка курьером
+                                    </span>
+                                    <span class="cart__form-delivery-info">
+                                        <span class="cart__form-delivery-i"></span>
+                                        <span class="cart__form-delivery-hint">
+                                            Мы принимаем онлайн платежи от банка "Сбербанк", при оплате с других банков
+                                            с вас будет взыматься комиссия
+                                            <span class="cart__form-delivery-hint-close"></span>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div class="cart__total-delivery-price">
+                                    300 р
+                                </div>
+                            </div>
+                            <div class="cart__total-sum">
+                                <div class="cart__total-sum-text">
+                                    <div class="cart__total-summary">Итого</div>
+                                    <div class="cart__total-sum-discount">Скидка 1050 Р</div>
+                                </div>
+                                <div class="cart__total-sum-common">6290 р</div>
+                            </div>
+                            <div class="cart__total-promo">
+                                <input type="checkbox" id="cart__total-promo" name="cart__total-promo" class="checkbox-custom" checked>
+                                <label for="cart__total-promo">
+                                    Согласен на рассылку акций и спецпредложений
+                                </label>
+                            </div>
+                            <div class="cart__total-btn">
+                                <a href="#" class="btn btn--disabled">Оформить заказ</a>
+                                <input type="submit" class="btn btn--black" value="Оформить заказ">
+                            </div>
+                            <div class="cart__total-rules">
+                                Нажимая на кнопку, вы подтверждаете своё совершеннолетие,
+                                соглашаетесь на обработку персональных данных в соответствии
+                                с <a href="#" class="cart__total-rules-link">Условиями</a>, а также с <a href="#" class="cart__total-rules-link">Условиями продажи</a>.
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="show__more">
-                    <a href="#" class="show__more-link">
-                        <span class="show__more-pic"></span>
-                        <br />
-                        <span class="show__more-text">Загрузить еще</span>
-                    </a>
+                    </form>
                 </div>
             </div>
         </section>

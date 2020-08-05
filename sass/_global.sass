@@ -31,6 +31,32 @@ a:focus
 svg, svg path
     transition: all .5s ease-out
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    margin: 0
+
+input[type="number"]
+    -moz-appearance: textfield
+    max-width: 64px
+    height: 35px
+    background-color: transparent
+    border: 1px solid #c4c4c4
+    text-align: center
+.quantity-block
+    display: flex
+    align-items: center
+
+.quantity-arrow-minus,
+.quantity-arrow-plus
+    cursor: pointer
+    font-size: 24px
+    font-weight: 900
+    padding: 0 16px
+    font-family: 'NeueMachina-Black', Arial, sans-serif
+
 input[type='submit'] 
     -webkit-appearance: none
     -moz-appearance: none
@@ -94,6 +120,99 @@ label.error
     font-size: 12px
     letter-spacing: 0.05em
     font-family: 'RobotoCondensed', Arial, sans-serif
+
+.checkbox-custom:checked, 
+.checkbox-custom:not(:checked), 
+input[type="radio"]:checked, 
+input[type="radio"]:not(:checked) 
+    position: absolute
+    left: -9999px
+
+
+.checkbox-custom:checked + label, 
+.checkbox-custom:not(:checked) + label, 
+input[type="radio"]:checked + label, 
+input[type="radio"]:not(:checked) + label 
+    display: inline-block
+    position: relative
+    padding-left: 40px
+    line-height: 20px
+    cursor: pointer
+
+.checkbox-custom:checked + label, 
+.checkbox-custom:not(:checked) + label
+    padding-left: 30px
+
+.checkbox-custom:checked + label:before, 
+.checkbox-custom:not(:checked) + label:before
+    content: ""
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 15px
+    height: 15px
+    border: 1px solid #000000
+    background-color: transparent
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before 
+    content: ""
+    position: absolute
+    left: 0px
+    top: 0px
+    width: 16px
+    height: 16px
+    border: 2px solid #000000
+    background-color: transparent
+
+input[type="radio"]:checked + label:before 
+    border-color: $green
+
+
+input[type="radio"]:checked + label:before, 
+input[type="radio"]:not(:checked) + label:before 
+    border-radius: 100%
+
+
+.checkbox-custom:checked + label:after, 
+.checkbox-custom:not(:checked) + label:after, 
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after 
+    content: ""
+    position: absolute
+    -webkit-transition: all 0.2s ease
+    -moz-transition: all 0.2s ease
+    -o-transition: all 0.2s ease
+    transition: all 0.2s ease
+
+.checkbox-custom:checked + label:after, 
+.checkbox-custom:not(:checked) + label:after 
+    left: 4px
+    top: 5px
+    width: 9px
+    height: 6px
+    background: url(../img/mark.png) no-repeat 50% 50%
+
+input[type="radio"]:checked + label:after, 
+input[type="radio"]:not(:checked) + label:after 
+    left: 5px
+    top: 5px
+    width: 10px
+    height: 10px
+    border-radius: 100%
+    background-color: $green
+
+.checkbox-custom:not(:checked) + label:after, 
+input[type="radio"]:not(:checked) + label:after 
+    opacity: 0
+
+
+.checkbox-custom:checked + label:after
+    opacity: 1
+
+input[type="radio"]:checked + label:after 
+    opacity: 1
+    background-color: $green
 
 .checkbox-toggler
     height: 0
@@ -190,12 +309,20 @@ label.error
     letter-spacing: 0.1em
     border: 1px solid #000000
     text-transform: uppercase
+    &:hover,
+    &:focus
+        background-color: #000000
+        color: #ffffff
     @media (max-width: 767px)
         padding: 32px
         border-radius: 0
     &--black
         background-color: #000000
         color: #ffffff
+        &:hover,
+        &:focus
+            background-color: $green
+            color: #ffffff
     &--disabled
         background-color: #e2e2e2
         border-color: #e2e2e2
@@ -204,6 +331,7 @@ label.error
         margin-bottom: 15px
         &:hover,
         &:focus
+            background-color: #e2e2e2
             color: #ffffff 
 
 .line

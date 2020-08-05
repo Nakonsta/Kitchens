@@ -175,7 +175,7 @@ $(function(){
                 $('.features__title').css('bottom', `auto`)
             }
         }
-    })
+    });
 
     // Скролл на странице "Где купить"
 
@@ -196,7 +196,7 @@ $(function(){
                     $('.to-buy__map-wrapper').css('bottom', `auto`)
                 }
         }
-    })
+    });
 
     // Слайдер в модалке на детальной товара
 
@@ -315,7 +315,97 @@ $(function(){
                     $('.sale-text__soc').css('bottom', `auto`)
                 }
         }
-    })
+    });
+
+    // Стилизация input type number
+
+    $('body').on('click', '.quantity-arrow-minus', function () {
+        var quantityNum = $(this).closest('.quantity-block').find(".quantity-num");
+        if (quantityNum.val() > 1) {
+            quantityNum.val(+quantityNum.val() - 1);
+        }
+    });
+
+    $('body').on('click', '.quantity-arrow-plus', function () {
+        var quantityNum = $(this).closest('.quantity-block').find(".quantity-num");
+        quantityNum.val(+quantityNum.val() + 1);
+    });
+
+    // FAQ
+
+    $( "#accordion" ).accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: "content"
+    });
+
+    // Скролл в корзине
+
+    if($('.cart').length) {
+        $(window).scroll(function() {
+            var sc = $(this).scrollTop();
+            var scBottom = 1700;
+            if ($('.cart__order').length) {
+                scBottom = 1180;
+            }
+            if(sc > 139) {
+                if(sc < scBottom) {
+                    $('.cart__total').css('bottom', `auto`)
+                    $('.cart__total').css('top', `${sc - 139}px`)
+                } else {
+                    $('.cart__total').css('top', `auto`)
+                    $('.cart__total').css('bottom', `0px`)
+                }
+            } else {
+                $('.cart__total').css('top', `0px`)
+                $('.cart__total').css('bottom', `auto`)
+            }
+            
+        });
+    }
+
+    // Слайдер на странице "О нас"
+
+    if($(window).innerWidth() >1023) {
+        var $slider = $("#about__slider");
+        $slider
+            .on('init', () => {
+                mouseWheel($slider)
+            })
+            .slick({
+                arrows: false,
+                vertical: true,
+                infinite: false,
+                slidesToShow: 3
+            })
+        function mouseWheel($slider) {
+            $(window).on('wheel', { $slider: $slider }, mouseWheelHandler)
+        }
+        function mouseWheelHandler(event) {
+            $(window).scroll(function() {
+                var sc = $(this).scrollTop();
+                if (sc > 260 && sc < 500) {
+                    event.preventDefault()
+                    const $slider = event.data.$slider
+                    const delta = event.originalEvent.deltaY
+                    if(delta > 0) {
+                        $slider.slick('slickNext')
+                    }
+                    else {
+                        $slider.slick('slickPrev')
+                    }
+                }
+            });
+        }
+    }
+
+    // Бегущая строка на странице "О нас"
+    $('.marquee').marquee({
+        duration: 17000,
+        startVisible: true,
+        duplicated: true,
+        gap: 250,
+    });
 
     // Валидация форм
 
