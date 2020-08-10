@@ -101,7 +101,7 @@
                             <a href="#" class="header__lang-link">En</a>
                         </div>
                     </div>
-                    <a href="#" class="dropdown-menu__login">Войти</a>
+                    <a href="#login" class="dropdown-menu__login fancy">Войти</a>
                 </div>
             </div>
         </div>
@@ -1130,6 +1130,66 @@
                             <input type="submit" class="btn btn--black btn--disabled" value="Отправить">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="logout" class="modal logout">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Вы точно хотите выйти?
+                </div>
+                <div class="logout__inner">
+                    <a href="#" class="btn btn--green">Остаться</a>
+                    <a href="#" class="btn">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="change-password" class="modal">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Изменить пароль
+                </div>
+                <div class="login-tab__body">
+                    <form class="change-password">
+                        <div class="form__row">
+                            <input name="change-password__old" type="password" class="input" id="change-password__old" required>
+                            <label for="change-password__old" class="label">Старый пароль</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="change-password__new" type="password" class="input" id="change-password__new" required>
+                            <label for="change-password__new" class="label">Новый пароль</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="change-password__new-repeate" type="password" class="input" id="change-password__new-repeate" required>
+                            <label for="change-password__new-repeate" class="label">Повторите новый пароль</label>
+                        </div>
+                        <div class="login__buttons">
+                            <input type="submit" class="btn btn--black btn--disabled" value="Изменить">
+                            <a href="#" class="btn">Отмена</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-success" class="modal register-success">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Регистрация прошла успешно!
+                </div>
+                <div class="login-tab__body">
+                    <div class="register-success__info">
+                        На адрес a.larionov@liqium.ru отправлено письмо с подтверждением регистрации
+                    </div>
+                    <a href="#" class="btn btn--green">Личный кабинет</a>
                 </div>
             </div>
         </div>

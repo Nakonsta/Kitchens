@@ -2790,8 +2790,10 @@
             font-size: 11px
             font-family: 'EuropeC', Arial, sans-serif
             letter-spacing: 0.13em
+            text-transform: uppercase
             @media (max-width: 767px)
                 font-size: 8px
+                text-transform: none
         &-person
             padding: 50px 220px 80px 0
             border-bottom: 1px solid #dcdcdc
@@ -2808,8 +2810,7 @@
         &-delivery
             padding: 65px 0 72px
             @media (max-width: 767px)
-                padding-top: 0
-                border-bottom: none
+                padding-top: 20px
             &-types
                 padding: 0 135px 0 50px
                 display: flex
@@ -2881,6 +2882,7 @@
             .cart__form-delivery-firms
                 width: 50%
                 padding-left: 40px
+                max-width: 210px
                 @media (max-width: 767px)
                     width: 100%
                 .selectize-input
@@ -2904,6 +2906,7 @@
                 padding-right: 5%
                 padding-bottom: 0
                 padding-top: 0
+                border-bottom: none
             &-inputs
                 padding-left: 50px
                 @media (max-width: 767px)
@@ -3062,6 +3065,11 @@
             @media (max-width: 1023px)
                 display: block
                 width: 100%
+            .btn
+                margin-top: 16px
+                margin-bottom: 0
+                @media (max-width: 767px)
+                    margin-bottom: 40px
         &-title
             padding: 0 22px
             display: flex
@@ -3260,6 +3268,8 @@
                     padding-bottom: 8px
                     @media (max-width: 767px)
                         font-size: 8px
+                &-data
+                    max-width: 270px
     &__promocode
         margin-bottom: 16px
         background-color: #f5f5f5
@@ -3596,6 +3606,73 @@
             @media (max-width: 767px)
                 height: 400px
 
-
-
-
+.lk
+    &__row
+        display: flex
+        padding: 40px 0 50px
+        border-top: 1px solid #e5e5e5
+        @media (max-width: 767px)
+            flex-direction: column
+    &__subtitle
+        width: 48%
+        font-family: 'Magistral-Book', Arial, sans-serif
+        font-size: 24px
+        letter-spacing: 0.07em
+        @media (max-width: 767px)
+            width: 100%
+            font-size: 18px
+    &__data
+        width: 52%
+        padding-left: 24px
+        font-weight: 300
+        letter-spacing: 0.025em
+        font-size: 18px
+        @media (max-width: 767px)
+            width: 100%
+            padding-left: 0
+            padding-top: 24px
+        &--noleftpadding
+            padding-left: 0
+    &__logout,
+    &__stock,
+    &__download
+        font-size: 11px
+        font-family: 'EuropeC', Arial, sans-serif
+        letter-spacing: 0.13em
+        padding-bottom: 14px
+        text-transform: uppercase
+        @media (max-width: 767px)
+            padding-bottom: 8px
+    &__logout
+        margin-left: 32px
+    &__stock
+        margin-right: 32px
+    &__download
+        padding-right: 24px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: -6px
+            width: 17px
+            height: 17px
+            right: 0
+            background: url(../img/load.png) no-repeat 50% 50%
+    &__link
+        display: inline-block
+        font-size: 11px
+        font-family: 'EuropeC', Arial, sans-serif
+        letter-spacing: 0.13em
+        margin-left: 40px
+        text-transform: uppercase
+        @media (max-width: 1439px)
+            display: block
+            margin-left: 0
+            margin-top: 12px
+    .cart__goods
+        padding: 0
+        background-color: transparent
+    .cart__item
+        padding-left: 24px
+        &:first-child
+            border-top: none

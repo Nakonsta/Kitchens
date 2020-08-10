@@ -101,7 +101,7 @@
                             <a href="#" class="header__lang-link">En</a>
                         </div>
                     </div>
-                    <a href="#" class="dropdown-menu__login">Войти</a>
+                    <a href="#login" class="dropdown-menu__login fancy">Войти</a>
                 </div>
             </div>
         </div>
@@ -434,54 +434,71 @@
                         <div class="modal__tab" data-login="register">Регистрация</div>
                     </div>
                 </div>
-                <div class="login-tab__body" data-login="auth">
-                    <form class="login__auth submit-activate">
-                        <div class="form__row">
-                            <input name="login__email" type="email" class="input" id="login__email" required>
-                            <label for="login__email" class="label">Электронная почта*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="login__password" type="password" class="input" id="login__password" required>
-                            <label for="login__password" class="label">Пароль*</label>
-                        </div>
-                        <div class="login__buttons">
-                            <input type="submit" class="btn btn--black btn--disabled" value="Войти">
-                            <a href="#" class="btn">Продолжить покупки</a>
-                        </div>
-                        <a href="#forget" class="login__forget fancy">Забыли пароль?</a>
-                    </form>
-                </div>
-                <div class="login-tab__body" data-login="register" style="display: none;">
-                    <form class="register submit-activate">
-                        <div class="form__row">
-                            <input name="register__name" type="text" class="input" id="register__name" required>
-                            <label for="register__name" class="label">Имя*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="register__surname" type="text" class="input" id="register__surname" required>
-                            <label for="register__name" class="label">Фамилия*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="register__email" type="email" class="input" id="register__email" required>
-                            <label for="register__email" class="label">Электронная почта*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="register__phone" type="tel" class="input" id="register__phone" required>
-                            <label for="register__phone" class="label">Телефон*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="register__password" type="password" class="input" id="register__password" required>
-                            <label for="register__password" class="label">Пароль*</label>
-                        </div>
-                        <div class="form__row">
-                            <input name="register__repeate" type="password" class="input" id="register__repeate" required>
-                            <label for="register__repeate" class="label">Повторите пароль*</label>
-                        </div>
-                        <div class="login__buttons">
-                            <input type="submit" class="btn btn--black btn--disabled" value="Зарегистрироваться">
-                            <a href="#" class="btn">Продолжить покупки</a>
-                        </div>
-                    </form>
+                <div class="login-tab__body-wrapper">
+                    <div class="login-tab__body" data-login="auth">
+                        <div class="modal__form-title--desktop">Вход</div>
+                        <form class="login__auth submit-activate">
+                            <div class="form__row">
+                                <input name="login__email" type="email" class="input" id="login__email" required>
+                                <label for="login__email" class="label">Электронная почта*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="login__password" type="password" class="input" id="login__password" required>
+                                <label for="login__password" class="label">Пароль*</label>
+                            </div>
+                            <div class="login__buttons">
+                                <input type="submit" class="btn btn--black btn--disabled" value="Войти">
+                                <!-- <a href="#" class="btn">Продолжить покупки</a> -->
+                            </div>
+                            <a href="#forget" class="login__forget fancy">Забыли пароль?</a>
+                            <a href="#register-success" class="login__forget fancy">Успешная регистрация</a>
+                        </form>
+                    </div>
+                    <div class="login-tab__body login-tab__body--mobile-dnone" data-login="register">
+                        <div class="modal__form-title--desktop">Регистрация</div>
+                        <form class="register submit-activate">
+                            <div class="form__row">
+                                <input name="register__name" type="text" class="input" id="register__name" required>
+                                <label for="register__name" class="label">Имя*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="register__surname" type="text" class="input" id="register__surname" required>
+                                <label for="register__name" class="label">Фамилия*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="register__email" type="email" class="input" id="register__email" required>
+                                <label for="register__email" class="label">Электронная почта*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="register__phone" type="tel" class="input" id="register__phone" required>
+                                <label for="register__phone" class="label">Телефон*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="register__password" type="password" class="input" id="register__password" required>
+                                <label for="register__password" class="label">Пароль*</label>
+                            </div>
+                            <div class="form__row">
+                                <input name="register__repeate" type="password" class="input" id="register__repeate" required>
+                                <label for="register__repeate" class="label">Повторите пароль*</label>
+                            </div>
+                            <div class="register__checkbox">
+                                <input type="checkbox" id="register__individual" name="register__individual" class="checkbox-custom">
+                                <label for="register__individual">
+                                    Физическое лицо
+                                </label>
+                            </div>
+                            <div class="register__checkbox">
+                                <input type="checkbox" id="register__entity" name="register__entity" class="checkbox-custom">
+                                <label for="register__entity">
+                                    Юридическое лицо
+                                </label>
+                            </div>
+                            <div class="login__buttons login__buttons--smallmargin">
+                                <input type="submit" class="btn btn--black btn--disabled" value="Зарегистрироваться">
+                                <!-- <a href="#" class="btn">Продолжить покупки</a> -->
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -536,6 +553,66 @@
                             <input type="submit" class="btn btn--black btn--disabled" value="Отправить">
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="logout" class="modal logout">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Вы точно хотите выйти?
+                </div>
+                <div class="logout__inner">
+                    <a href="#" class="btn btn--green">Остаться</a>
+                    <a href="#" class="btn">Выйти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="change-password" class="modal">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Изменить пароль
+                </div>
+                <div class="login-tab__body">
+                    <form class="change-password">
+                        <div class="form__row">
+                            <input name="change-password__old" type="password" class="input" id="change-password__old" required>
+                            <label for="change-password__old" class="label">Старый пароль</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="change-password__new" type="password" class="input" id="change-password__new" required>
+                            <label for="change-password__new" class="label">Новый пароль</label>
+                        </div>
+                        <div class="form__row">
+                            <input name="change-password__new-repeate" type="password" class="input" id="change-password__new-repeate" required>
+                            <label for="change-password__new-repeate" class="label">Повторите новый пароль</label>
+                        </div>
+                        <div class="login__buttons">
+                            <input type="submit" class="btn btn--black btn--disabled" value="Изменить">
+                            <a href="#" class="btn">Отмена</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-success" class="modal register-success">
+        <div class="modal__flex">
+            <div class="modal__inner">
+                <div class="modal__title">
+                    Регистрация прошла успешно!
+                </div>
+                <div class="login-tab__body">
+                    <div class="register-success__info">
+                        На адрес a.larionov@liqium.ru отправлено письмо с подтверждением регистрации
+                    </div>
+                    <a href="#" class="btn btn--green">Личный кабинет</a>
                 </div>
             </div>
         </div>

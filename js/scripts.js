@@ -346,7 +346,7 @@ $(function(){
             var sc = $(this).scrollTop();
             var scBottom = 1700;
             if ($('.cart__order').length) {
-                scBottom = 1180;
+                scBottom = 550;
             }
             if(sc > 139) {
                 if(sc < scBottom) {
